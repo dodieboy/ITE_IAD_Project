@@ -1,0 +1,197 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cocoland | Orders</title>
+    <link rel="icon" href="img/logo2.png">
+    <link href="CSS/boilerplate.css" rel="stylesheet" type="text/css">
+    <link href="CSS/Styles2.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="JS/respond.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <script src="JS/fullpage.js"></script>
+    <script src="JS/login_check.js"></script>
+    <script src="JS/js.js"></script>
+    <script src="JS/captcha.js"></script>
+    <script src="JS/client_captcha.js" defer></script>
+</head>
+
+<body>
+    <div class="bg">
+        <video autoplay loop muted>
+    <source src="img/Candy Background - Motion Graphics - Videohive template.MP4" type="video/mp4">
+  </video>
+    </div>
+    <div class="gridContainer clearfix">
+        <div class="header">
+            <div class="logo"><img src="img/logo1.png" />
+                <p class="UName"></p>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="logout.php">Logout Now</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="Order.html">Orders</a></li>
+                        <li><a href="store.html">Store</a></li>
+                        <!--<li><a href="#">Your Cart</a></li>-->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <section class="layout-top">
+        <div class="boxOrder"> </div>
+    </section>
+    <section class="contant">
+        <div class="Container">
+            <div class="topBox"></div>
+            <div class="Container">
+                <h1>My Enquiry</h1>
+                <form onsubmit="window.location.href = 'OrderComplete.html'; return false;">
+                    <ul class="flex-outer">
+                        <h2>Personal Infomation</h2>
+                        <div class="PersonalInfoForm">
+                            <li class="titles">
+                                <label for="titles">Titles:</label>
+                                <div>
+                                    <input type="radio" name="titles" class="title" id="mr" value="Mr" checked="True" />
+                                    <label for="mr">Mr</label>
+                                    <input type="radio" name="titles" class="title" id="dr" value="Dr" />
+                                    <label for="dr">Dr</label>
+                                    <input type="radio" name="titles" class="title" id="ms" value="Ms" />
+                                    <label for="ms">Ms</label>
+                                    <input type="radio" name="titles" class="title" id="mrs" value="Mrs" />
+                                    <label for="mrs">Mrs</label>
+                                    <input type="radio" name="titles" class="title" id="mdn" value="Mdn" />
+                                    <label for="mdn">Mdn</label>
+                                </div>
+                            </li>
+                            <li>
+                                <label for="first-name">First Name:</label>
+                                <input type="text" class="inputs" id="first-name" placeholder="First Name*" required="required">
+                            </li>
+                            <li>
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" class="inputs" id="last-name" placeholder="Last Name*" required="required">
+                            </li>
+                            <li>
+                                <label for="email">Email:</label>
+                                <input type="email" class="inputs" id="email" placeholder="Your Email*" required="required">
+                            </li>
+                            <li>
+                                <label for="phone">Contact Number:</label>
+                                <input type="tel" class="inputs" pattern="^\d{8}$" id="phone" placeholder="Contact Number*" required="required">
+                            </li>
+                            <li>
+                                <label for="address">Address:</label>
+                                <textarea rows="3" class="inputs" id="address" placeholder="Your Address*" required="required"></textarea>
+                            </li>
+                            <li>
+                                <label for="organisation">Organisation:</label>
+                                <input type="text" class="inputs" id="organisation" placeholder="Your Organisation">
+                            </li>
+                            <li>
+                                <label for="message">Message or Requirement:</label>
+                                <textarea rows="6" class="inputs" id="message" placeholder="Message or requirement if any"></textarea>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="flex-outer">
+                        <div class="left">
+                            <h2>Make an Order</h2>
+                            <from id="orderForm">
+                                <li>
+                                    <label for="product">Product:</label>
+                                    <select name="product" id="products">
+                                        <option value="Hersheys Milk Chocolate">Hershey's Milk Chocolate</option>
+                                        <option value="Hersheys Skor Candy Bar">Hershey's Skor Candy Bar</option>
+                                        <option value="Krackel Chocolate Bar">Krackel Chocolate Bar</option>
+                                </select>
+                                </li>
+                                <li>
+                                    <label for="quantity" id="quantityLabel">Quantity:</label>
+                                    <input type="number" name="quantitys" id="quantitys" value="1" min="1">
+                                </li>
+                                <li>
+                                    <button type="button" id="addCart">Add to Cart</button>
+                                </li>
+                            </from>
+                        </div>
+                    </ul>
+                    <ul>
+                        <div class="right">
+                            <h2>You Cart</h2>
+                            <table id="orderTable">
+                                <tr>
+                                    <th id="id">ID</th>
+                                    <th id="product">Product</th>
+                                    <th id="quantity">Quantity</th>
+                                    <th id="action">Action</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </ul>
+                    <ul>
+                        <div class="summary">
+                            <h2>Summary</h2>
+                            <table id="summaryTable">
+                                <tr id="headRow">
+                                    <th>Full Name</th>
+                                    <th>Email Address</th>
+                                    <th>Phone Number</th>
+                                    <th>Your Address</th>
+                                    <th>Organisation</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </ul>
+                    <ul>
+                        <div class="btnSummary">
+                            <p><strong>Click the button to check your personal information</strong></p>
+                            <button type="button" id="btnSummary">Show Summary</button>
+                        </div>
+                    </ul>
+                    <ul>
+                        <div class="captcha-chat">
+                            <div class="captcha-container media">
+                                <div class="media-body">
+                                    <br/>
+                                    <h2 class="security">Security Check:</h2>
+                                </div>
+                                <div id="captcha">
+                                    <div class="controls">
+                                        <input class="user-text btn-common" placeholder="Type here" type="text" />
+                                        <input style="display: none" id="captchaCheck" required="true" />
+                                        <button type="button" class="refresh btn-common"><img src="img/refresh_icon.png" alt="refresh icon"></button>
+                                        <button type="submit" class="validate btn-common">Submit</button>
+                                    </div>
+                                </div>
+                                <p class="wrong info">Wrong!, please try again.</p>
+                            </div>
+                        </div>
+                    </ul>
+                </form>
+                <div id="payment">
+                    <p>We accept Visa, Mastercard and Paypal payment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div id="social">
+            <ul>
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-twitter-square"></i></li>
+                <li><i class="fab fa-telegram"></i></li>
+            </ul>
+            <p>© 2018 Cocoland Inc. All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

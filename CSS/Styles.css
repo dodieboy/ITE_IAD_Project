@@ -1,0 +1,741 @@
+@charset "utf-8";
+
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+
+img,
+object,
+embed,
+video {
+    max-width: 100%;
+}
+
+
+/* IE 6 does not support max-width so default to width 100% */
+
+.ie6 img {
+    width: 100%;
+}
+
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.fluid {
+    clear: both;
+    margin-left: 0;
+    width: 100%;
+    float: left;
+    display: block;
+}
+
+.fluidList {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Mobile Layout: 480px and below. */
+
+.bg {
+    position: fixed;
+    z-index: -1;
+    width: 768px;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.header {
+    background-color: none;
+    padding-top: 15px;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#head h1 {
+    font-size: 40px;
+    color: white;
+    padding-top: 35vh;
+}
+
+#headWIP h1 {
+    font-size: 40px;
+    color: white;
+    padding-top: 35vh;
+}
+
+.gridContainer {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+    clear: none;
+    float: none;
+}
+
+.logo {
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+}
+
+.UName {
+    display: none;
+}
+
+.menu {
+    float: none;
+    font-size: 2em;
+    width: 100%;
+    margin-left: 0;
+    clear: both;
+}
+
+.menu ul {
+    margin: 0;
+    padding-right: 0px;
+    display: block;
+    padding-left: 0;
+    width: 100%;
+}
+
+.menu li {
+    margin-left: 0 auto;
+    width: 100%;
+}
+
+.menu a {
+    float: left;
+    text-transform: uppercase;
+    color: #F59C1E;
+    text-decoration: none;
+    writing-mode: horizontal-tb;
+    padding-left: 0px;
+    font-size: 14px;
+}
+
+.menu a:link {
+    height: 30px;
+    width: 100%;
+}
+
+.menu a:hover {
+    color: #FFF;
+    transform: .5s;
+}
+
+.layout-top {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.box1 {
+    background-color: black;
+    width: 100%;
+    height: 50vh;
+}
+
+.layout-bottom {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.box2 {
+    background-color: black;
+    width: 100%;
+    height: 13vh;
+}
+
+
+/*###################
+		content
+###################*/
+
+#fullpage {
+    margin: 0;
+    position: absolute;
+    z-index: 9;
+}
+
+#fullpage section {
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+section article {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    z-index: 10;
+}
+
+.cart button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.cart button span {
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.cart button:hover:after {
+    content: 'Add To Cart \1F6D2';
+}
+
+.cart button:hover span {
+    display: none;
+    padding-right: 25px;
+    transition: 0.5s;
+}
+
+#About {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+#About article {
+    padding-top: 40vh;
+    width: 100%;
+}
+
+#About h1 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+#About p {
+    background-color: #F59C1E;
+    margin: 0;
+    font-size: 22px;
+}
+
+#WIP {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+#WIP article {
+    padding-top: 40vh;
+    width: 100%;
+}
+
+#WIP h1 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+#WIP p {
+    background-color: #F59C1E;
+    margin: 0;
+    font-size: 22px;
+}
+
+section article #itemImg1 {
+    height: 60vh;
+}
+
+.itemInfo {
+    position: absolute;
+    bottom: 4%;
+    left: 0;
+    width: 100%;
+}
+
+.itemInfo p {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+
+#itemImg1 img {
+    width: 40vh;
+    height: auto;
+}
+
+#itemImg1 figure {
+    position: relative;
+}
+
+#itemImg1 figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+#itemImg1 figure:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+#item1 article {
+    padding-top: 44vh;
+}
+
+#item2 article {
+    padding-top: 44vh;
+}
+
+#item3 article {
+    padding-top: 44vh;
+}
+
+#contact {
+    background-color: black;
+    color: white;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding-top: 40vh;
+    ;
+}
+
+#contact p {
+    margin: 0;
+}
+
+#contact h2 {
+    margin: 10px;
+}
+
+#contact #social {
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    transform: translate(-43%, -50%)
+}
+
+
+/*###################
+		footer
+###################*/
+
+footer {
+    background-color: black;
+    color: white;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#social {
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    left: 45%;
+    transform: translate(-40%, -40%)
+}
+
+#social li {
+    list-style: none;
+    margin: 10px 15px;
+    display: inline-block;
+    font-size: 15px;
+    padding: 12px 12px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transform: .5s;
+}
+
+#social li:hover {
+    color: #F59C1E;
+    border: 1px solid #F59C1E;
+    transform: .5s;
+}
+
+footer ul {
+    padding: 0;
+}
+
+.zeroMargin_mobile {
+    margin-left: 0;
+}
+
+.hide_mobile {
+    display: none;
+}
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+    .gridContainer {
+        width: 100%;
+        clear: none;
+        float: none;
+        margin-left: auto;
+    }
+    .hide_tablet {
+        display: none;
+    }
+    .zeroMargin_tablet {
+        margin-left: 0;
+    }
+    .itemInfo {
+        bottom: 5%;
+    }
+    /*###################
+		footer
+###################*/
+    footer {
+        padding-top: 25%;
+        text-align: center;
+    }
+    #social {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-30%, -40%)
+    }
+    #social li {
+        list-style: none;
+        margin: 10px 15px;
+        display: inline-block;
+        font-size: 15px;
+        padding: 15px 15px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        transform: .5s;
+    }
+    #contact {
+        background-color: black;
+        color: white;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        padding-top: 30vh;
+        ;
+    }
+    #contact #social {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-40%, 0)
+    }
+    #contact {
+        background-color: black;
+        color: white;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        padding-top: 40vh;
+        ;
+    }
+    #contact p {
+        margin: 5px;
+    }
+    #contact h2 {
+        font-size: 30px;
+        margin: 15px;
+    }
+}
+
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+    .gridContainer {
+        width: 100%;
+        margin: none;
+        clear: none;
+        float: none;
+        margin-left: auto;
+    }
+    .zeroMargin_desktop {
+        margin-left: 0;
+    }
+    .hide_desktop {
+        display: none;
+    }
+    .bg {
+        width: 120%;
+        bottom: -11vh;
+    }
+    .logo {
+        padding: 20px;
+        width: 14%;
+        float: left;
+    }
+    .UName {
+        display: block;
+        font-size: 22px;
+        color: #F59C1E;
+        margin: 10px 0;
+    }
+    #head h1 {
+        font-size: 42px;
+        color: #F59C1E;
+    }
+    #headWIP h1 {
+        font-size: 42px;
+        color: #F59C1E;
+        margin: 0;
+        padding-top: 33vh;
+    }
+    #headWIP h2 {
+        font-size: 35px;
+        color: #FFF;
+        margin: 0;
+    }
+    .menu {
+        float: right;
+        padding-right: 2%;
+        width: 23.7288%;
+        clear: none;
+    }
+    .menu ul {
+        margin: 0;
+        padding-right: 15px;
+    }
+    .menu li {
+        display: block;
+    }
+    .menu a {
+        float: right;
+        font-size: 15px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        color: #F59C1E;
+        text-decoration: overline;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+    }
+    .menu a:link {
+        height: auto;
+        padding: 5px;
+        width: auto;
+    }
+    .box1 {
+        background-color: black;
+        width: 100%;
+        height: 50vh;
+    }
+    .boxOrder {
+        background-color: black;
+        width: 100%;
+        height: 28vh;
+    }
+    .box2 {
+        background-color: black;
+        width: 100%;
+        height: 8vh;
+    }
+    /*###################
+		content
+###################*/
+    section article {
+        width: 100%;
+        height: 73vh;
+    }
+    #fullpage #order {
+        min-height: 100vh;
+    }
+    #itemImg1 img {
+        width: 50%;
+        height: auto;
+    }
+    #item1 article {
+        padding-top: 32vh;
+    }
+    #item2 article {
+        padding-top: 32vh;
+    }
+    #item3 article {
+        padding-top: 32vh;
+    }
+    section article #itemImg1 {
+        padding-top: auto;
+    }
+    .itemInfo {
+        width: 92%;
+        left: 4%;
+        right: 4%;
+        bottom: 5%;
+        text-align: start;
+    }
+    .itemName {
+        float: left;
+        padding-top: 13px;
+    }
+    .cart {
+        float: right;
+    }
+    #About {
+        position: absolute;
+        left: 12%;
+        right: 12%;
+        width: 76%;
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+    }
+    #About article {
+        padding-top: 40vh;
+        width: 100%;
+    }
+    #About h1 {
+        font-size: 48px;
+    }
+    #About p {
+        padding: 10px 0;
+        background-color: #F59C1E;
+        font-size: 25px;
+    }
+    #WIP {
+        position: absolute;
+        left: 12%;
+        right: 12%;
+        width: 76%;
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+    }
+    #WIP article {
+        padding-top: 40vh;
+        width: 100%;
+    }
+    #WIP h1 {
+        font-size: 48px;
+    }
+    #WIP p {
+        padding: 10px 0;
+        background-color: #F59C1E;
+        font-size: 25px;
+    }
+    #contact {
+        background-color: black;
+        color: white;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        padding-top: 30vh;
+        ;
+    }
+    #contact #social {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-53%, -55%)
+    }
+    #contact {
+        background-color: black;
+        color: white;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        padding-top: 40vh;
+    }
+    #contact p {
+        margin: 5px;
+    }
+    #contact h2 {
+        font-size: 30px;
+        margin: 15px;
+    }
+    /*###################
+		footer
+###################*/
+    #footer {
+        padding-top: 25%;
+    }
+    #social {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-53%, -50%);
+    }
+    #social li {
+        list-style: none;
+        margin: 10px 30px;
+        display: inline-block;
+        font-size: 20px;
+        padding: 20px 20px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        transform: .5s;
+    }
+}

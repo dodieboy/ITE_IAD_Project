@@ -1,0 +1,4 @@
+bg: https://www.youtube.com/watch?v=fSkkD215w_c
+img effort from :https://codepen.io/nxworld/pen/ZYNOBZ
+custom radio button: https://codepen.io/anon/pen/WYLpYb?editors=1100
+textbox: https://codepen.io/Lewitje/pen/BNNJjo

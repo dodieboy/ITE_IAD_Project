@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+
+img,
+object,
+embed,
+video {
+    max-width: 100%;
+}
+
+
+/* IE 6 does not support max-width so default to width 100% */
+
+.ie6 img {
+    width: 100%;
+}
+
+
+/*Default Layout*/
+
+body {
+    line-height: 1.4;
+    width: 100vw;
+    margin: 0;
+    z-index: 0;
+}
+
+h1,
+h2,
+h3 {
+    color: #ECC235;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+h1 {
+    font-size: 46px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+a {
+    text-decoration: none;
+    color: #F59C1E;
+}
+
+a:hover {
+    color: #FFF;
+}
+
+
+/*###################
+    radio Button
+###################*/
+
+.titles div {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.titles div input {
+    margin-left: 10px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #fff;
+}
+
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 19px;
+    height: 19px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #F59C1E;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+[type="radio"]:checked+label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Mobile Layout: 480px and below. */
+
+.bg {
+    position: fixed;
+    z-index: -2;
+    width: 350%;
+    bottom: -11vh;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.left,
+.right {
+    position: relative;
+    text-align: center;
+    height: 100%;
+}
+
+#fullpage {
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+#fullpage section {
+    margin: 0;
+    position: relative;
+}
+
+form {
+    padding: 10px 0;
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    margin: 0 10%;
+    text-align: center;
+}
+
+form input::placeholder {
+    color: #683e31;
+}
+
+form input:hover {
+    background-color: #f7b355;
+}
+
+form input {
+    display: block;
+    outline: 0;
+    border: 1px solid #F59C1E;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    font-size: 18px;
+    color: #683e31;
+    transition-duration: 0.25s;
+    font-weight: 300;
+}
+
+form input:focus {
+    background-color: white;
+    color: #F59C1E;
+}
+
+button {
+    outline: 0;
+    background-color: #F59C1E;
+    border: 0;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 3px;
+    font-size: 18px;
+    transition-duration: 0.25s;
+}
+
+button:hover {
+    background-color: #f7b355;
+}
+
+
+/* Tablet Layout: 481px to 777px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+    .bg {
+        width: 330%;
+    }
+}
+
+
+/* Desktop Layout: 777px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 777px) {
+    .bg {
+        width: 200%;
+    }
+}
