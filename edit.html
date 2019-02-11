@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
     <script src="JS/fullpage.js"></script>
     <script src="JS/login_check.js"></script>
-    <script src="JS/js.js"></script>
+    <script src="JS/edit.js"></script>
 </head>
 
 <body>
@@ -68,27 +68,26 @@
                             <input type="email" class="inputs" id="email" placeholder="Your Email*" required="required">
                         </li>
                         <li class="titles">
-                            <label for="titles">Titles:</label>
+                            <label for="gender">Gender:</label>
                             <div>
-                                <input type="radio" name="titles" class="title" id="mr" value="Mr" checked="True" />
-                                <label for="mr">Mr</label>
-                                <input type="radio" name="titles" class="title" id="dr" value="Dr" />
-                                <label for="dr">Dr</label>
-                                <input type="radio" name="titles" class="title" id="ms" value="Ms" />
-                                <label for="ms">Ms</label>
-                                <input type="radio" name="titles" class="title" id="mrs" value="Mrs" />
-                                <label for="mrs">Mrs</label>
-                                <input type="radio" name="titles" class="title" id="mdn" value="Mdn" />
-                                <label for="mdn">Mdn</label>
+                                <input type="radio" name="gender" class="title" id="Male" value="M" checked="True" />
+                                <label for="mr">Male</label>
+                                <input type="radio" name="gender" class="title" id="Female" value="F" />
+                                <label for="ms">Female</label>
                             </div>
                         </li>
                         <li>
                             <label for="phone">Contact Number:</label>
                             <input type="tel" class="inputs" pattern="^\d{8}$" id="phone" placeholder="Contact Number*" required="required">
                         </li>
-                        <li>
-                            <label for="organisation">Role:</label>
-                            <input type="text" class="inputs" id="organisation" placeholder="Role: A/N">
+                        <li class="titles">
+                            <label for="role">Role:</label>
+                            <div>
+                                <input type="radio" name="role" class="title" id="Admin" value="A" checked="True" />
+                                <label for="mr">Admin</label>
+                                <input type="radio" name="role" class="title" id="Normal" value="M" />
+                                <label for="ms">Normal</label>
+                            </div>
                         </li>
                         <li>
                             <div class="btnRow">

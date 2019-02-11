@@ -212,3 +212,15 @@ V4.0.2
 	Change:
 	1.style3.css for edit.html support
 	2."User name" to "User Name" for table at admin.html
+
+V4.0.3
+	Added:
+	1.edit.js & userSearch.php
+	2.feature on admin.html, when user role is click, it bring you to edit.html with the user data display nice into the textbox
+
+	Change:
+	1.Recoded user info table display on admin.html so it can run javascript when click
+	2.minor changes on edit.html contant
+
+	Fixed:
+	1.back button at edit.html now work
