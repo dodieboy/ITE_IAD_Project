@@ -241,3 +241,14 @@ V4.0.4
 
 	Fixed:
 	1.when go to register.html, it keep bring you to index.html
+
+V4.0.5
+	Added:
+	1.update user info into sql feature to updateP.php (if password is not change for now)
+
+	Change:
+	1.cleanup login_check.js
+
+	Fixed:
+	1.type at edit.js (updateP.php.php to updateP.php)
+	2.function update is not passing data to updateP.php

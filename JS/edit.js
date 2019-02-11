@@ -15,7 +15,7 @@ function loadUser(uName) {
     $.ajax({
         type: "POST",
         url: 'userSearch.php',
-        data: "username=" + uName,
+        data: { username: uName },
         dataType: 'json',
         success: function(data) {
             $('#username').val(data[0]);
@@ -46,8 +46,16 @@ function update() {
     if ($('#password').val() == uPassword) {
         $.ajax({
             type: "POST",
-            url: 'updateP.php.php',
-            data: $(this).serialize(),
+            url: 'updateP.php',
+            data: {
+                username: $('#username').val(),
+                password: $('#password').val(),
+                fullname: $('#fullname').val(),
+                email: $('#email').val(),
+                phone: $('#phone').val(),
+                gender: $("input[name='gender']:checked").val(),
+                role: $("input[name='role']:checked").val()
+            },
             success: function(data) {
                 var output = data;
                 alert(output);

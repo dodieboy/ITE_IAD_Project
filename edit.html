@@ -53,40 +53,40 @@
                     <div>
                         <li>
                             <label for="Username">User Name:</label>
-                            <input type="text" class="inputs" id="username" placeholder="User Name" title="Not allowed to change" readonly>
+                            <input type="text" class="inputs" name="username" id="username" placeholder="User Name" title="Not allowed to change" readonly>
                         </li>
                         <li>
                             <label for="Name">Name:</label>
-                            <input type="text" class="inputs" id="fullname" placeholder="Name" required="required">
+                            <input type="text" class="inputs" name="password" id="fullname" placeholder="Name" required="required">
                         </li>
                         <li>
                             <label for="address">Password:</label>
-                            <input type="text" class="inputs" id="password" placeholder="Password" required="required">
+                            <input type="text" class="inputs" name="fullname" id="password" placeholder="Password" required="required">
                         </li>
                         <li>
                             <label for="email">Email:</label>
-                            <input type="email" class="inputs" id="email" placeholder="Your Email*" required="required">
+                            <input type="email" class="inputs" name="email" id="email" placeholder="Your Email*" required="required">
                         </li>
                         <li class="titles">
                             <label for="gender">Gender:</label>
                             <div>
-                                <input type="radio" name="gender" class="title" id="Male" value="M" checked="True" />
-                                <label for="mr">Male</label>
+                                <input type="radio" name="gender" class="title" id="Male" value="M" />
+                                <label for="Male">Male</label>
                                 <input type="radio" name="gender" class="title" id="Female" value="F" />
-                                <label for="ms">Female</label>
+                                <label for="Female">Female</label>
                             </div>
                         </li>
                         <li>
                             <label for="phone">Contact Number:</label>
-                            <input type="tel" class="inputs" pattern="^\d{8}$" id="phone" placeholder="Contact Number*" required="required">
+                            <input type="tel" class="inputs" name="phone" pattern="^\d{8}$" id="phone" placeholder="Contact Number*" required="required">
                         </li>
                         <li class="titles">
                             <label for="role">Role:</label>
                             <div>
-                                <input type="radio" name="role" class="title" id="Admin" value="A" checked="True" />
-                                <label for="mr">Admin</label>
-                                <input type="radio" name="role" class="title" id="Normal" value="M" />
-                                <label for="ms">Normal</label>
+                                <input type="radio" name="role" class="title" id="Admin" value="A" />
+                                <label for="Admin">Admin</label>
+                                <input type="radio" name="role" class="title" id="Normal" value="N" />
+                                <label for="Normal">Normal</label>
                             </div>
                         </li>
                         <li>
