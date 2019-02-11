@@ -1,3 +1,12 @@
+######################################################################################
+								Credit
+######################################################################################
+Special thanks to them for all the resource :)
+bg: https://www.youtube.com/watch?v=fSkkD215w_c
+img effort from :https://codepen.io/nxworld/pen/ZYNOBZ
+custom radio button: https://codepen.io/anon/pen/WYLpYb?editors=1100
+textbox: https://codepen.io/Lewitje/pen/BNNJjo
+
 Changelog
 ===================================================================================
 V1
@@ -224,3 +233,11 @@ V4.0.3
 
 	Fixed:
 	1.back button at edit.html now work
+
+V4.0.4
+	Added:
+	1.updateP.php
+	2.function update at edit.js (WIP)
+
+	Fixed:
+	1.when go to register.html, it keep bring you to index.html

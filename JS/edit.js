@@ -4,7 +4,12 @@ $(document).ready(function() {
     $('#btnBack').click(function(event) {
         window.location = 'admin.html';
     });
+    $('#btnUpdate').click(function(event) {
+        update();
+    });
 });
+
+var uPassword;
 
 function loadUser(uName) {
     $.ajax({
@@ -16,6 +21,7 @@ function loadUser(uName) {
             $('#username').val(data[0]);
             $('#fullname').val(data[1]);
             $('#password').val(data[2]);
+            uPassword = data[2];
             $('#email').val(data[3]);
             if (data[4] == "M") {
                 $("input[name='gender'][id='Male']").prop('checked', true);
@@ -34,4 +40,21 @@ function loadUser(uName) {
             }
         }
     });
+}
+
+function update() {
+    if ($('#password').val() == uPassword) {
+        $.ajax({
+            type: "POST",
+            url: 'updateP.php.php',
+            data: $(this).serialize(),
+            success: function(data) {
+                var output = data;
+                alert(output);
+                if (data.indexOf('Successfully') >= 0) {
+                    window.location = 'admin.html';
+                }
+            }
+        });
+    }
 }

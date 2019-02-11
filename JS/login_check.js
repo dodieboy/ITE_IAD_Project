@@ -9,7 +9,9 @@ function login_check() {
         dataType: 'json',
         success: function(data) {
             if (data[0].indexOf('fail') >= 0) {
-                if ($(location).attr('pathname').indexOf('index.html') <= 0) {
+                if (($(location).attr('pathname').indexOf('register.html') <= 0)) {
+                    break;
+                } else if (($(location).attr('pathname').indexOf('index.html') <= 0)) {
                     window.location = 'index.html';
                 }
             } else {
