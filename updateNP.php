@@ -1,7 +1,6 @@
 <?php
 $UUsername = $_POST["username"];
 $UName = $_POST["fullname"];
-$UPassword = $_POST["password"];
 $UEmail = $_POST["email"];
 $UPhone = $_POST["phone"];
 $UGender = $_POST["gender"];
@@ -25,7 +24,7 @@ if(mysqli_connect_errno()){
 mysqli_select_db($conn, $db);
 
 //Define a SQL Select statement
-$sql = "UPDATE `user` SET `Name`='$UName',`Password`='$UPassword',`Email`='$UEmail',`Gender`='$UGender',`Phone`='$UPhone',`Role`='$URole' WHERE `Username` = '$UUsername'";
+$sql = "UPDATE `user` SET `Name`='$UName',`Email`='$UEmail',`Gender`='$UGender',`Phone`='$UPhone',`Role`='$URole' WHERE `Username` = '$UUsername'";
 
 if ($conn->query($sql) == TRUE) {
    print("User Updated Successfully");

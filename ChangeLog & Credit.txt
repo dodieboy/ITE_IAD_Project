@@ -252,3 +252,11 @@ V4.0.6
 	Fixed:
 	1.type at edit.js (updateP.php.php to updateP.php)
 	2.function update is not passing data to updateP.php
+V4.0.7
+	Added:
+	1.update user info into sql feature to updateP.php (for updating user password)
+	2.go to admin portal when admin click on their username at top righ corner (only work for user that have role "A")
+
+	Change:
+	1.rename updateP.php to updateNP.php
+	2.improve login check system

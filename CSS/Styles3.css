@@ -1,4 +1,14 @@
     @charset "utf-8";
+    html {
+        font-family: sans-serif;
+        line-height: 1.4;
+        font-size: 100%;
+    }
+    
+    table {
+        border-spacing: 0;
+    }
+    
     img,
     object,
     embed,
@@ -75,6 +85,16 @@
     
     .UName {
         display: none;
+    }
+    
+    .user {
+        text-decoration: none;
+        color: #F59C1E;
+    }
+    
+    .user:hover {
+        color: #e57002;
+        transform: .5s;
     }
     
     .menu {
