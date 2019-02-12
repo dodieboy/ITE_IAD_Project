@@ -73,6 +73,16 @@ video {
     display: none;
 }
 
+.user {
+    text-decoration: none;
+    color: #F59C1E;
+}
+
+.user:hover {
+    color: #e57002;
+    transform: .5s;
+}
+
 .menu {
     float: none;
     font-size: 2em;

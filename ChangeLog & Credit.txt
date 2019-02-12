@@ -252,6 +252,7 @@ V4.0.6
 	Fixed:
 	1.type at edit.js (updateP.php.php to updateP.php)
 	2.function update is not passing data to updateP.php
+
 V4.0.7
 	Added:
 	1.update user info into sql feature to updateP.php (for updating user password)
@@ -260,3 +261,10 @@ V4.0.7
 	Change:
 	1.rename updateP.php to updateNP.php
 	2.improve login check system
+
+V4.0.8
+	Added:
+	1.Delete btton to edit.html
+
+	Fixed:
+	1.admin user name is not correct color at order.html

@@ -7,6 +7,9 @@ $(document).ready(function() {
     $('#btnUpdate').click(function(event) {
         update();
     });
+    $('#btnDelete').click(function(event) {
+        UDelete();
+    });
 });
 
 var uPassword;
@@ -86,4 +89,21 @@ function update() {
             }
         });
     }
+}
+
+function UDelete() {
+    $.ajax({
+        type: "POST",
+        url: 'deleteUser.php',
+        data: {
+            username: $('#username').val()
+        },
+        success: function(data) {
+            var output = data;
+            alert(output);
+            if (data.indexOf('Successfully') >= 0) {
+                window.location = 'admin.html';
+            }
+        }
+    });
 }

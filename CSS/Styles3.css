@@ -303,6 +303,10 @@
     #btnBack {
         float: right;
     }
+    
+    #btnDelete {
+        float: right;
+    }
     /*###################
 		footer
 ###################*/
