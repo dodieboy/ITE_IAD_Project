@@ -296,15 +296,7 @@
         width: 100%;
     }
     
-    #btnUpdate {
-        float: right;
-    }
-    
-    #btnBack {
-        float: right;
-    }
-    
-    #btnDelete {
+    .btnLeft {
         float: right;
     }
     /*###################

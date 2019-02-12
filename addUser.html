@@ -14,7 +14,7 @@
     <script src="JS/fullpage.js"></script>
     <script src="JS/jquery.md5.js"></script>
     <script src="JS/login_check.js"></script>
-    <script src="JS/edit.js"></script>
+    <script src="JS/add.js"></script>
 </head>
 
 <body>
@@ -50,11 +50,11 @@
             <div class="topBox"></div>
             <div class="userContainer">
                 <ul class="flex-outer">
-                    <h2>Edit</h2>
+                    <h2>New User</h2>
                     <div>
                         <li>
                             <label for="Username">User Name:</label>
-                            <input type="text" class="inputs" name="username" id="username" placeholder="User Name" title="Not allowed to change" readonly>
+                            <input type="text" class="inputs" name="username" id="username" placeholder="User Name" title="Not allowed to change">
                         </li>
                         <li>
                             <label for="Name">Name:</label>
@@ -71,7 +71,7 @@
                         <li class="titles">
                             <label for="gender">Gender:</label>
                             <div>
-                                <input type="radio" name="gender" class="title" id="Male" value="M" />
+                                <input type="radio" name="gender" class="title" id="Male" value="M" checked />
                                 <label for="Male">Male</label>
                                 <input type="radio" name="gender" class="title" id="Female" value="F" />
                                 <label for="Female">Female</label>
@@ -84,7 +84,7 @@
                         <li class="titles">
                             <label for="role">Role:</label>
                             <div>
-                                <input type="radio" name="role" class="title" id="Normal" value="N" />
+                                <input type="radio" name="role" class="title" id="Normal" value="N" checked />
                                 <label for="Normal">Normal</label>
                                 <input type="radio" name="role" class="title" id="Admin" value="A" />
                                 <label for="Admin">Admin</label>
@@ -92,8 +92,7 @@
                         </li>
                         <li>
                             <div class="btnRow">
-                                <input type="button" id="btnUpdate" class="btnLeft" value="Update">
-                                <input type="button" id="btnDelete" class="btnLeft" value="Delete">
+                                <input type="button" id="btnCreate" class="btnLeft" value="Create">
                                 <input type="button" id="btnBack" class="btnLeft" value="Back">
                             </div>
                         </li>

@@ -30,6 +30,16 @@ if ($conn->query($sql) == TRUE) {
    print("User Updated Successfully");
 }
 else{
-    print("Error!!!");
-}
+    $pos = strrpos($conn->error, "PRIMARY");
+    $pos2 = strrpos($conn->error, "Email");
+    if($pos == true){
+       print("This Username is taken \nPlease pick another Username");
+    }
+    else if($pos2 == true){
+       print("This Email is taken \nPlease pick another Email");
+    }
+    else{
+    print("Error: ".$conn->error);
+    }
+ }
 ?>

@@ -268,3 +268,11 @@ V4.0.8
 
 	Fixed:
 	1.admin user name is not correct color at order.html
+
+V4.0.9
+	Added:
+	1.addUser.html & addUser.html & add.js for admin to admin new user
+
+	Change:
+	1.shorten style3.css code
+	2.better error code for updateP.php and updateNP.php
