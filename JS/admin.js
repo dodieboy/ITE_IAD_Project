@@ -1,5 +1,11 @@
 $(document).ready(function() {
     showTable();
+    $('#btnRefresh').click(function(event) {
+        showTable()
+    });
+    $('#btnAdd').click(function(event) {
+        window.location = 'addUser.html';
+    });
 });
 
 function showTable() {

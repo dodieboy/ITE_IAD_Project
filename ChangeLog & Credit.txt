@@ -276,3 +276,12 @@ V4.0.9
 	Change:
 	1.shorten style3.css code
 	2.better error code for updateP.php and updateNP.php
+
+V4.1.0
+	Added:
+	1.refresh button at admin.html to refresh table
+	2.add button at admin.html to red to addUser.html
+
+	Change:
+	1.improve website loading speed
+	2.now use jquery 3.3.1 min for all html file now

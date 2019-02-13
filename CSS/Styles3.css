@@ -299,6 +299,10 @@
     .btnLeft {
         float: right;
     }
+    
+    #table {
+        clear: both;
+    }
     /*###################
 		footer
 ###################*/
