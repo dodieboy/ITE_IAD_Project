@@ -18,8 +18,7 @@ $(document).ready(function() {
                 Password: tempPass
             },
             success: function(data) {
-                var output = data;
-                alert(output);
+                alert(data);
                 if (data.indexOf('Successfully') >= 0) {
                     window.location = 'admin.html';
                 } else {

@@ -1,24 +1,9 @@
 <?php
-$UUsername = $_POST["username"];
+include 'main.php';
 
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$db = 'iad_project';
+$UUsername = $_POST["username"];
 $tb = 'user';
 
-// Try to connect to phpmyadmin
-$conn = mysqli_connect($host, $user, $password);
-
-// Check for error when connecting
-if(mysqli_connect_errno()){
-   echo "Error! Connection Failed";
-}
-
-//Connect to database
-mysqli_select_db($conn, $db);
-
-//Define a SQL Select statement
 $sql = "DELETE FROM `user` WHERE `Username` = '$UUsername'";
 
 if ($conn->query($sql) == TRUE) {

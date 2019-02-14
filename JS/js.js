@@ -18,8 +18,7 @@ $(document).ready(function() {
             url: 'login.php',
             data: $(this).serialize() + "&md5Password=" + tempPass,
             success: function(data) {
-                var output = data;
-                $('#result').html(output);
+                $('#result').html(data);
                 $('#result').show();
                 if (data.indexOf('Success') >= 0) {
                     roleCheck();
@@ -37,8 +36,7 @@ $(document).ready(function() {
             url: 'register.php',
             data: $(this).serialize() + "&md5Password=" + tempPass,
             success: function(data) {
-                var output = data;
-                alert(output);
+                alert(data);
                 if (data.indexOf('Successfully') >= 0) {
                     window.location = 'index.html';
                 } else {

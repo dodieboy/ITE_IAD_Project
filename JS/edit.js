@@ -60,8 +60,7 @@ function update() {
                 role: $("input[name='role']:checked").val()
             },
             success: function(data) {
-                var output = data;
-                alert(output);
+                alert(data);
                 if (data.indexOf('Successfully') >= 0) {
                     window.location = 'admin.html';
                 }
@@ -82,8 +81,7 @@ function update() {
                 role: $("input[name='role']:checked").val()
             },
             success: function(data) {
-                var output = data;
-                alert(output);
+                alert(data);
                 if (data.indexOf('Successfully') >= 0) {
                     window.location = 'admin.html';
                 }
@@ -100,8 +98,7 @@ function UDelete() {
             username: $('#username').val()
         },
         success: function(data) {
-            var output = data;
-            alert(output);
+            alert(data);
             if (data.indexOf('Successfully') >= 0) {
                 window.location = 'admin.html';
             }
