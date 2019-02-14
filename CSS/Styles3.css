@@ -37,6 +37,11 @@
         margin: 4px 0;
         padding: 5px;
     }
+
+    [readonly]{
+        cursor: not-allowed;
+    }
+
     /* Mobile Layout: 555px and below. */
     
     .bg {
