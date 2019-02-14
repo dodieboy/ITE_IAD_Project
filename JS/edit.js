@@ -4,7 +4,8 @@ $(document).ready(function() {
     $('#btnBack').click(function(event) {
         window.location = 'admin.html';
     });
-    $('#btnUpdate').click(function(event) {
+    $('#edit').on("submit", function(e) {
+        e.preventDefault();
         update();
     });
     $('#btnDelete').click(function(event) {

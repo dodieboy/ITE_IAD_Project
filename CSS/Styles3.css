@@ -31,7 +31,8 @@
         padding: 0;
     }
     
-    [type="button"] {
+    [type="button"],
+    [type="submit"] {
         border-radius: 12px;
         margin: 4px 0;
         padding: 5px;
@@ -186,12 +187,12 @@
     
     .contant h1 {
         font-size: 35px;
-        margin: 20px 0;
+        margin: 15px 0;
     }
     
     .contant h2 {
         font-size: 25px;
-        margin: 0;
+        margin: 10px 0;
         text-align: left;
     }
     
@@ -224,37 +225,23 @@
         display: none;
     }
     
-    .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
-        position: absolute;
-        z-index: 1;
-        bottom: 125%;
-        left: 50%;
-        margin-left: -60px;
-        opacity: 0;
-        transition: opacity 0.3s;
+    .btnRow {
+        width: 100%;
     }
     
-    .tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
+    .btnLeft {
+        float: right;
     }
     
-    .uData:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
+    .userTips {
+        float: left;
+        text-align: left;
+        font-size: 14px;
+        margin: 0;
+    }
+    
+    #table {
+        clear: both;
     }
     
     .flex-outer {
@@ -265,11 +252,10 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        padding: 10px 0;
+        padding-bottom: 16px;
     }
     
-    .flex-outer li label,
-    .flex-outer li p {
+    .flex-outer li label {
         flex: 1 0 150px;
         max-width: 240px;
         padding-left: 15px;
@@ -278,6 +264,10 @@
     
     .flex-outer li label+* {
         flex: 1 0 180px;
+    }
+    
+    #ePassword {
+        padding-bottom: 0;
     }
     
     .inputs {
@@ -290,18 +280,6 @@
     
     .inputs::placeholder {
         color: #FFF;
-    }
-    
-    .btnRow {
-        width: 100%;
-    }
-    
-    .btnLeft {
-        float: right;
-    }
-    
-    #table {
-        clear: both;
     }
     /*###################
 		footer
@@ -406,15 +384,6 @@
     /* Tablet Layout: 555px to 985px. Inherits styles from: Mobile Layout. */
     
     @media only screen and (min-width: 555px) {
-        .gridContainer {
-            width: 100%;
-            clear: none;
-            float: none;
-            margin-left: auto;
-        }
-        .zeroMargin_tablet {
-            margin-left: 0;
-        }
         .boxOrder {
             height: 30vh;
             min-height: 280px;
@@ -440,12 +409,6 @@
     /* Desktop Layout: 985px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
     
     @media only screen and (min-width: 985px) {
-        .zeroMargin_desktop {
-            margin-left: 0;
-        }
-        .hide_desktop {
-            display: none;
-        }
         .bg {
             width: 120%;
             bottom: -10vh;

@@ -51,22 +51,26 @@
             <div class="userContainer">
                 <ul class="flex-outer">
                     <h2>Edit</h2>
-                    <div>
+                    <form id="edit">
                         <li>
                             <label for="Username">User Name:</label>
-                            <input type="text" class="inputs" name="username" id="username" placeholder="User Name" title="Not allowed to change" readonly>
+                            <input type="text" class="inputs" name="username" id="username" placeholder="User Name" title="Not allowed to change" required="required" maxlength="25">
                         </li>
                         <li>
-                            <label for="Name">Name:</label>
-                            <input type="text" class="inputs" name="password" id="fullname" placeholder="Name" required="required">
+                            <label for="fullname">Name:</label>
+                            <input type="text" class="inputs" name="fullname" id="fullname" placeholder="Name" required="required" maxlength="255">
+                        </li>
+                        <li id="ePassword">
+                            <label for="Password">Password:</label>
+                            <input type="password" class="inputs" name="password" id="password" placeholder="Password" required="required" maxlength="100">
                         </li>
                         <li>
-                            <label for="address">Password:</label>
-                            <input type="text" class="inputs" name="fullname" id="password" placeholder="Password" required="required">
+                            <label for="tooltips"></label>
+                            <p class="userTips">*If don't want update password, dont change the above password!</p>
                         </li>
                         <li>
                             <label for="email">Email:</label>
-                            <input type="email" class="inputs" name="email" id="email" placeholder="Your Email*" required="required">
+                            <input type="email" class="inputs" name="email" id="email" placeholder="Your Email*" required="required" maxlength="255">
                         </li>
                         <li class="titles">
                             <label for="gender">Gender:</label>
@@ -92,12 +96,12 @@
                         </li>
                         <li>
                             <div class="btnRow">
-                                <input type="button" id="btnUpdate" class="btnLeft" value="Update">
+                                <input type="submit" id="btnUpdate" class="btnLeft" value="Update">
                                 <input type="button" id="btnDelete" class="btnLeft" value="Delete">
                                 <input type="button" id="btnBack" class="btnLeft" value="Back">
                             </div>
                         </li>
-                    </div>
+                    </form>
                 </ul>
             </div>
         </div>
@@ -109,7 +113,6 @@
                 <li><i class="fab fa-instagram"></i></li>
                 <li><i class="fab fa-twitter-square"></i></li>
                 <li><i class="fab fa-telegram"></i></li>
-
             </ul>
             <p>© 2018 Cocoland Inc. All Rights Reserved</p>
         </div>

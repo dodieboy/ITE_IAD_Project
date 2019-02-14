@@ -285,3 +285,13 @@ V4.1.0
 	Change:
 	1.improve website loading speed
 	2.now use jquery 3.3.1 min for all html file now
+
+V4.1.1
+	Added:
+	1.more tooltip at admin.html & edit.html
+
+	Change:
+	1.now edit.html and add.html will validate the data before send to php
+
+	Removed:
+	1.useless code at admin.html & edit.html & admin.js & style3.css

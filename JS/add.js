@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $("#btnCreate").on("click", function(e) {
+    $("#create").on("submit", function(e) {
+        e.preventDefault();
         var tempPass = $.md5($('#password').val());
         $.ajax({
             type: "POST",
