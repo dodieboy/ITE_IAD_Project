@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    $('#btnBack').click(function(event) {
+        window.location = 'admin.html';
+    });
     $("#create").on("submit", function(e) {
         e.preventDefault();
         var tempPass = $.md5($('#password').val());

@@ -295,3 +295,7 @@ V4.1.1
 
 	Removed:
 	1.useless code at admin.html & edit.html & admin.js & style3.css
+
+V4.1.2
+	Fixed:
+	1.back button not working at addUser.html
