@@ -5,7 +5,6 @@ $password = '';
 
 $db = 'iad_project';
 
-$db = 'epiz_23455877_iad_project';
 $conn = mysqli_connect($host, $user, $password);
 
 if(mysqli_connect_errno()){
