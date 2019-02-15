@@ -1,9 +1,9 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$password = '';
+$host = 'sql203.epizy.com';
+$user = 'epiz_23455877';
+$password = 'ezTZxxtl4R';
 
-$db = 'iad_project';
+$db = 'epiz_23455877_iad_project';
 $conn = mysqli_connect($host, $user, $password);
 
 if(mysqli_connect_errno()){
