@@ -313,3 +313,8 @@ V4.1.4
 
 	Removed:
 	1.Recode & Delete some code in all js file
+	
+V4.1.5
+	Change:
+	1.recode the backgroud video to make it smaller and is encoded
+	2.recode the backgroud video sizing code in css
