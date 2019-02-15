@@ -318,3 +318,9 @@ V4.1.5
 	Change:
 	1.recode the backgroud video to make it smaller and is encoded
 	2.recode the backgroud video sizing code in css
+
+V4.1.6
+	Change:
+	1.compress bg2.mp4 and logo.jpg file size so website will load faster
+	2.update fullpage.js and use min version
+	3.make respond.min.js min again
