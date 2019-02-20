@@ -1,35 +1,3 @@
-body {
-    line-height: 1.4;
-    width: 100vw;
-    margin: 0;
-    z-index: 0;
-}
-
-img,
-object,
-embed,
-video {
-    max-width: 100%;
-}
-
-.bg {
-    position: fixed;
-    z-index: -2;
-    height: 100vh;
-    width: 100vw;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-}
-
-.bg video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-
 /* animation*/
 
 @-webkit-keyframes shine {
@@ -45,133 +13,7 @@ video {
 }
 
 
-/* Header (nav) */
-
-.header {
-    background-color: none;
-    padding-top: 15px;
-    position: absolute;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    text-align: center;
-}
-
-#head h1 {
-    font-size: 40px;
-    color: white;
-    padding-top: 39vh;
-    margin: 0;
-}
-
-.logo {
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-    margin-left: 0;
-}
-
-.UName {
-    display: none;
-}
-
-.user {
-    text-decoration: none;
-    color: #F59C1E;
-}
-
-.user:hover {
-    color: #e57002;
-    transform: .5s;
-}
-
-.menu {
-    float: none;
-    font-size: 2em;
-    width: 100%;
-    margin-left: 0;
-    clear: both;
-}
-
-.menu ul {
-    margin: 0;
-    padding-right: 0px;
-    display: block;
-    padding-left: 0;
-    width: 100%;
-}
-
-.menu li {
-    margin-left: 0 auto;
-    width: 100%;
-    height: 25px;
-}
-
-.menu a {
-    float: left;
-    text-transform: uppercase;
-    color: #F59C1E;
-    text-decoration: none;
-    writing-mode: horizontal-tb;
-    padding-left: 0px;
-    font-size: 14px;
-}
-
-.menu a:link {
-    height: 25px;
-    width: 100%;
-}
-
-.menu a:hover {
-    color: #FFF;
-    transform: .5s;
-}
-
-.layout-top,
-.layout-bottom {
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    right: 0;
-    background-color: black;
-    width: 100%;
-}
-
-.layout-top {
-    top: 0;
-    height: 56vh;
-}
-
-.layout-bottom {
-    bottom: 0;
-    height: 16vh;
-}
-
-
 /* content */
-
-#fullpage {
-    margin: 0;
-    position: absolute;
-    z-index: 9;
-}
-
-#fullpage section {
-    height: 100vh;
-    margin: 0;
-    position: relative;
-}
-
-section article {
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    text-align: center;
-    z-index: 10;
-}
 
 .cart button {
     display: inline-block;
@@ -259,119 +101,14 @@ section article #itemImg {
 }
 
 
-/* footer */
-
-footer {
-    background-color: black;
-    color: white;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-}
-
-#social {
-    position: absolute;
-    text-align: center;
-    top: 55%;
-    left: 45%;
-    transform: translate(-40%, -40%)
-}
-
-#social li {
-    list-style: none;
-    margin: 10px 15px;
-    display: inline-block;
-    font-size: 15px;
-    padding: 12px 12px;
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    transform: .5s;
-}
-
-#social li:hover {
-    color: #F59C1E;
-    border: 1px solid #F59C1E;
-    transform: .5s;
-}
-
-footer ul {
-    padding: 0;
-}
-
-
 /* Tablet Layout: 481px to 777px. Inherits styles from: Mobile Layout. */
 
-@media only screen and (min-width: 481px) {
-    /* footer */
-    footer {
-        padding-top: 25%;
-    }
-    #social {
-        top: 40%;
-        left: 40%;
-        transform: translate(-30%, -40%)
-    }
-    #social li {
-        padding: 15px 15px;
-    }
-}
+@media only screen and (min-width: 481px) {}
 
 
 /* Desktop Layout: 777px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 
 @media only screen and (min-width: 777px) {
-    .logo {
-        padding: 20px;
-        width: 14%;
-        float: left;
-    }
-    .UName {
-        display: block;
-        font-size: 22px;
-        color: #F59C1E;
-        margin: 10px 0;
-    }
-    #head h1 {
-        font-size: 42px;
-        color: #F59C1E;
-    }
-    .menu {
-        float: right;
-        padding-right: 2%;
-        width: 23.7288%;
-        clear: none;
-    }
-    .menu ul {
-        margin: 0;
-        padding-right: 15px;
-    }
-    .menu li {
-        display: block;
-        height: auto;
-    }
-    .menu a {
-        float: right;
-        font-size: 15px;
-        font-weight: bolder;
-        text-transform: uppercase;
-        color: #F59C1E;
-        text-decoration: overline;
-        writing-mode: vertical-lr;
-        text-orientation: upright;
-    }
-    .menu a:link {
-        height: auto;
-        padding: 5px;
-        width: auto;
-    }
-    .layout-top {
-        height: 50vh;
-    }
-    .layout-bottom {
-        bottom: 0;
-        height: 8vh;
-    }
     /* content */
     .product {
         width: 100%;
@@ -409,19 +146,5 @@ footer ul {
         padding: 10px;
         width: 200px;
         margin: 5px;
-    }
-    /* footer */
-    #footer {
-        padding-top: 25%;
-    }
-    #social {
-        top: 40%;
-        left: 50%;
-        transform: translate(-53%, -50%);
-    }
-    #social li {
-        margin: 10px 30px;
-        font-size: 20px;
-        padding: 20px 20px;
     }
 }

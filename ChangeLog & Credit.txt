@@ -336,3 +336,14 @@ V4.2.0
 
 	Remove:
 	1.img/layout.svg since it is not use
+
+V4.2.1
+	Change:
+	1.the footer postion at mobile mode so it place better at mobile
+	2.bring common use css code to Default_Store_style.css from store.css
+	3.recoded contact.html & about.html, now no longer need boilerplate.css to work (now it use Default_Store_style.css)
+	4.the social media icon layout for mobile mode
+
+	Known bug(not fix):
+	1.video backgroud not working at mobile (tested at ios 10)
+	2.vh and vw not working at safari brower ios
