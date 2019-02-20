@@ -53,6 +53,12 @@ video {
 
 /* Mobile Layout: 480px and below. */
 
+body {
+    background-image: url('../img/Bg2.gif');
+    background-size: cover;
+    background-color: #F59C1E;
+}
+
 .bg {
     position: fixed;
     z-index: -2;

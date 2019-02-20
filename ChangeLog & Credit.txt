@@ -347,3 +347,7 @@ V4.2.1
 	Known bug(not fix):
 	1.video backgroud not working at mobile (tested at ios 10)
 	2.vh and vw not working at safari brower ios
+
+V4.2.2
+	Fixed:
+	1.video backgroud not working at mobile (tested at ios 10), now it use gif for the backgroud. may change back when i find a way to work for mobile

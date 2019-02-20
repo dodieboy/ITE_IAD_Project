@@ -3,6 +3,9 @@ body {
     width: 100vw;
     margin: 0;
     z-index: 0;
+    background-image: url('../img/Bg2.gif');
+    background-size: cover;
+    background-color: #F59C1E;
 }
 
 img,
