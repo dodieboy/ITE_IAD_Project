@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    $('#fullpage').fullpage();
     $(".cart").on('click', function() {
         $(".popup").fadeIn('slow');
     });

@@ -324,3 +324,15 @@ V4.1.6
 	1.compress bg2.mp4 and logo.jpg file size so website will load faster
 	2.update fullpage.js and use min version
 	3.make respond.min.js min again
+
+V4.2.0
+	Change:
+	1.recoded store.html, now no longer need boilerplate.css to work (now it use store.css)
+	3.change the product img to 800 x 400 size so it is easier to set the img on website
+	2.all html that use fullpage.js will no longer link to js.js to access fullpage.js
+
+	Fixed:
+	2.fullpage.js keep outputing that there is no lience in dev console again
+
+	Remove:
+	1.img/layout.svg since it is not use

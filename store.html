@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cocoland | Store</title>
     <link rel="icon" href="img/logo2.png">
-    <link href="CSS/boilerplate.css" rel="stylesheet" type="text/css">
-    <link href="CSS/Styles.css" rel="stylesheet" type="text/css">
+    <link href="CSS/store.css" rel="stylesheet" type="text/css">
     <link href="CSS/fontawesome/css/all.css" rel="stylesheet">
     <script src="JS/respond.min.js"></script>
     <script src="JS/jquery-3.3.1.min.js"></script>
-    <script src="JS/login_check.js"></script>
     <script src="JS/fullpage.js"></script>
-    <script src="JS/js.js"></script>
     <script src="JS/store.js"></script>
+    <script src="JS/login_check.js"></script>
 </head>
 
 <body>
@@ -23,40 +21,36 @@
             <source src="img/Bg2.mp4" type="video/mp4">
         </video>
     </div>
-    <div class="gridContainer clearfix">
-        <div class="header">
-            <div class="logo"><img src="img/logo1.png" />
-                <p class="UName"></p>
-            </div>
-            <div class="menu">
-                <nav>
-                    <ul>
-                        <li><a href="logout.php">Logout Now</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="Order.html">Orders</a></li>
-                        <li><a href="store.html">Store</a></li>
-                        <!--<li><a href="#">Your Cart</a></li>-->
-                    </ul>
-                </nav>
-            </div>
+    <div class="header">
+        <div class="logo"><img src="img/logo1.png" />
+            <p class="UName"></p>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="logout.php">Logout Now</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="Order.html">Orders</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <!--<li><a href="#">Your Cart</a></li>-->
+                </ul>
+            </nav>
         </div>
     </div>
     <section class="layout-top">
-        <div class="box1"> </div>
     </section>
     <section class="layout-bottom">
-        <div class="box2"> </div>
     </section>
     <div id="fullpage">
-        <section class="section" id="head">
-            <article>
+        <section class="section">
+            <article id="head">
                 <h1>The land of your dream</h1>
             </article>
         </section>
         <section class="section" id="item1">
-            <article>
-                <div id="itemImg1">
+            <article class="product">
+                <div id="itemImg">
                     <figure><img src="img/hershey's-milk-chocolate.png" width="900" height="900" /></figure>
                 </div>
                 <div class="itemInfo">
@@ -68,9 +62,9 @@
             </article>
         </section>
         <section class="section" id="item2">
-            <article>
-                <div id="itemImg1">
-                    <figure><img src="img/hershey's-skor-candy-bar1.png" width="900" height="900" /></figure>
+            <article class="product">
+                <div id="itemImg">
+                    <figure><img src="img/hershey's-skor-candy-bar.png" width="900" height="1000" /></figure>
                 </div>
                 <div class="itemInfo">
                     <p class="itemName" id="itemName2">Product 2</p>
@@ -81,9 +75,9 @@
             </article>
         </section>
         <section class="section" id="item3">
-            <article>
-                <div id="itemImg1">
-                    <figure><img src="img/krackel-chocolate-bar.png" width="900" height="900" /></figure>
+            <article class="product">
+                <div id="itemImg">
+                    <figure><img src="img/krackel-chocolate-bar.png" width="900" height="1500" /></figure>
                 </div>
                 <div class="itemInfo">
                     <p class="itemName" id="itemName3">Product 3</p>
