@@ -16,12 +16,6 @@
         max-width: 100%;
     }
     
-    body {
-        background-image: url('../img/Bg2.gif');
-        background-size: cover;
-        background-color: #F59C1E;
-    }
-    
     .fluid {
         clear: both;
         margin-left: 0;
