@@ -347,3 +347,8 @@ V4.2.1
 	Known bug(not fix):
 	1.video backgroud not working at mobile (tested at ios 10)
 	2.vh and vw not working at safari brower ios
+
+V4.2.2
+	Change:
+	1.recoded WIP.html, now no longer need boilerplate.css to work (now it use Default_Store_style.css)
+	2.the look of the footer in Default_Store_style.css

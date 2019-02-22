@@ -187,6 +187,45 @@ section article {
     font-size: 22px;
 }
 
+#headWIP h1 {
+    font-size: 35px;
+    color: #F59C1E;
+    margin: 0;
+    padding-top: 42vh;
+}
+
+#headWIP h2 {
+    font-size: 32px;
+    color: #FFF;
+    margin: 0;
+}
+
+#WIP {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+#WIP article {
+    padding-top: 40vh;
+    width: 100%;
+}
+
+#WIP h1 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+#WIP p {
+    background-color: #F59C1E;
+    margin: 0;
+    font-size: 22px;
+}
+
 
 /* footer */
 
@@ -201,7 +240,7 @@ footer {
 #social {
     position: absolute;
     text-align: center;
-    top: 75%;
+    bottom: 0;
     left: 20%;
     transform: translate(-10%, -40%)
 }
@@ -258,11 +297,8 @@ footer ul {
 
 @media only screen and (min-width: 481px) {
     /* footer */
-    footer {
-        padding-top: 25%;
-    }
     #social {
-        top: 60%;
+        bottom: 0;
         left: 40%;
         transform: translate(-30%, -40%)
     }
@@ -362,12 +398,28 @@ footer ul {
         padding: 10px 0;
         font-size: 25px;
     }
-    /* footer */
-    #footer {
-        padding-top: 25%;
+    #headWIP h1 {
+        font-size: 42px;
+        padding-top: 33vh;
     }
+    #headWIP h2 {
+        font-size: 35px;
+    }
+    #WIP {
+        left: 12%;
+        right: 12%;
+        width: 76%;
+    }
+    #WIP h1 {
+        font-size: 48px;
+    }
+    #WIP p {
+        padding: 10px 0;
+        font-size: 25px;
+    }
+    /* footer */
     #social {
-        top: 40%;
+        bottom: 20%;
         left: 50%;
         transform: translate(-53%, -50%);
     }
