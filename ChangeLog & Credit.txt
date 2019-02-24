@@ -383,6 +383,13 @@ V5.0.1
 	Change:
 	1.improve footer centering code
 	2.now using fontawesome min version
+	3.reduce the sixe of produce pic
 
 	Removed:
 	1.respond.min.js
+
+V5.0.2
+	Change:
+	1.added webkit video player support for mobile
+	2.improve the store.html layout for mobile
+	3.improve the about.html layout for mobile

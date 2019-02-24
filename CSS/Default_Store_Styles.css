@@ -12,6 +12,21 @@ video {
     max-width: 100%;
 }
 
+*::-webkit-media-controls-panel {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+*::--webkit-media-controls-play-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+*::-webkit-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
 .bg {
     position: fixed;
     z-index: -2;
@@ -49,9 +64,9 @@ ul {
 }
 
 #head h1 {
-    font-size: 35px;
+    font-size: 8vw;
     color: white;
-    padding-top: 40vh;
+    padding-top: 35vh;
     margin: 0;
 }
 
@@ -138,12 +153,12 @@ ul {
 
 .layout-top {
     top: 0;
-    height: 50vh;
+    height: 45vh;
 }
 
 .layout-bottom {
     bottom: 0;
-    height: 18vh;
+    height: 19vh;
 }
 
 
@@ -180,12 +195,12 @@ section article {
 }
 
 #About article {
-    padding-top: 39vh;
+    padding-top: 36vh;
     width: 100%;
 }
 
 #About h1 {
-    font-size: 34px;
+    font-size: 30px;
     margin: 10px 0;
 }
 
@@ -302,6 +317,11 @@ footer ul {
 /* Tablet Layout: 481px to 777px. Inherits styles from: Mobile Layout. */
 
 @media only screen and (min-width: 481px) {
+    #head h1 {
+        font-size: 7vw;
+        color: white;
+        padding-top: 33vh;
+    }
     /* footer */
     #social {
         bottom: 0;
@@ -401,6 +421,10 @@ footer ul {
     #About p {
         padding: 10px 0;
         font-size: 25px;
+    }
+    #About article {
+        padding-top: 39vh;
+        width: 100%;
     }
     #headWIP h1 {
         font-size: 42px;
