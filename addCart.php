@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if($_POST["type"]=='update1'){
+        unset($_SESSION["shopping_cart"]);
+    }
 	if(isset($_SESSION["shopping_cart"]))
 	{
 		$item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
@@ -13,11 +16,15 @@
 				'item_quantity'		=>	$_POST["quantity"]
 			);
             $_SESSION["shopping_cart"][$count] = $item_array;
-            echo 'Item Added';
+            if(strrpos($_POST["type"], "update")===false){
+                echo 'Item Added';
+            }
 		}
 		else
 		{
-			echo 'You already add to cart';
+            if(strrpos($_POST["type"], "update")===false){
+                echo 'You already add to cart';
+            }
 		}
 	}
 	else
@@ -29,6 +36,8 @@
             'item_quantity'		=>	$_POST["quantity"]
 		);
         $_SESSION["shopping_cart"][0] = $item_array;
-        echo 'Item Added';
+        if(strrpos($_POST["type"], "update")===false){
+            echo 'Item Added';
+        }
 	}
 ?>

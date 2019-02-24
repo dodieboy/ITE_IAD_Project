@@ -27,14 +27,14 @@ function price() {
 }
 
 function addCart(pId, pName, pPrice) {
-    alert(pId + pName + pPrice);
     $.ajax({
         type: "POST",
         url: 'addCart.php',
         data: {
+            type: "add",
             id: pId,
             name: pName,
-            price: pPrice,
+            price: pPrice.replace(/[$]/g, ''),
             quantity: "1"
         },
         success: function(data) {

@@ -398,9 +398,16 @@ V5.1.0
 	WIP:
 	1.cart system (added cart.php & addcart.php & cart.html)
 
+V5.1.1
+	Added:
+	1.cart system where user can add produce want to buy to cart and see total cost
+	
+	Removed:
+	1.order.html & OrderComplete.html & style2.css
+
 	Todo:
 	1.cart.html design
 	2.must login to add to cart
-	3.total price in cart.html
-	4.cart count at nav
+	3.cart count at nav
+	4.cart send to database
 	5.more thing that i havnt think yet :)
