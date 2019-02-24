@@ -36,7 +36,7 @@
  }
  
  .right_container {
-     margin: 20% 3%;
+     margin: 22% 3%;
      height: 60%;
      width: 94%
  }
@@ -49,12 +49,8 @@
      width: 92%;
  }
  
- button {
+ [type="submit"] {
      width: 82%;
- }
- 
- button:hover {
-     background-color: #f7b355;
  }
  /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
  
@@ -71,7 +67,7 @@
          height: 90vh;
      }
      .log_logo img {
-         width: 220px;
+         width: 180px;
      }
      .left {
          z-index: 2;
@@ -86,13 +82,16 @@
          background-color: #683e31;
          width: 90%;
      }
-     button {
+     [type="submit"] {
          width: 81%;
      }
  }
  /* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
  
  @media only screen and (min-width: 769px) {
+     .log_logo img {
+         width: 220px;
+     }
      .left {
          background-image: url("../img/login.jpg");
          background-repeat: no-repeat;
@@ -104,13 +103,16 @@
          background-color: #683e31;
          width: 55%;
      }
+     .right_container {
+         margin: 20% 3%;
+     }
      form input {
          width: 75%;
      }
      form input:focus {
          width: 92%;
      }
-     button {
+     [type="submit"] {
          width: 82%;
      }
  }

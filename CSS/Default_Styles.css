@@ -202,18 +202,35 @@ form input:focus {
     color: #F59C1E;
 }
 
-button {
+[type="submit"] {
     outline: 0;
     background-color: #F59C1E;
     border: 0;
     padding: 10px 30px;
     color: white;
-    border-radius: 3px;
+    border-radius: 4px;
     font-size: 18px;
     transition-duration: 0.25s;
 }
 
-button:hover {
+[type="submit"]:hover {
+    background-color: #f7b355;
+}
+
+.store-button {
+    outline: 0;
+    background-color: #F59C1E;
+    border: 0;
+    padding: 8px 8px;
+    color: white;
+    border-radius: 4px;
+    font-size: 18px;
+    transition-duration: 0.25s;
+    float: left;
+    margin: 20px;
+}
+
+.store-button:hover {
     background-color: #f7b355;
 }
 

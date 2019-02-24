@@ -19,5 +19,5 @@ function price() {
         error: function() {
             alert("error");
         }
-    });
+    })
 }

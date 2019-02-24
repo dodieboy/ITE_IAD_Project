@@ -352,3 +352,29 @@ V4.2.2
 	Change:
 	1.recoded WIP.html, now no longer need boilerplate.css to work (now it use Default_Store_style.css)
 	2.the look of the footer in Default_Store_style.css
+
+######################################################################################
+							Final Project Update
+######################################################################################
+V5.0.0
+	Added:
+	1."back to store" button to login.html
+
+	Change:
+	1.change store.html to index.html and index.html to login.html
+	2.rename login_Check.js to default.js
+	3.recoded default.js to fit with change 1
+	4.redesign nav for mobile mode
+	5.minor change to .uname layout in css
+	6.combined add.js and edit.js into admin.js
+
+	Fixed:
+	1.Styles2.css and style3.css footer backgroud not full
+	2.footer for contact.html look spoil in all mode
+
+	Removed:
+	1.style.css as it is not use anymore
+	2.CandysSweetsAnimatedBackgroun.gif
+	3.nestle-100-grand-candy-bar.jpg
+	4.snickers-singles.jpg
+	5.whatchamacallit-candy-bar.jpg

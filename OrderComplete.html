@@ -12,7 +12,7 @@
     <script src="JS/respond.min.js"></script>
     <script src="JS/jquery-3.3.1.min.js"></script>
     <script src="JS/fullpage.js"></script>
-    <script src="JS/login_check.js"></script>
+    <script src="JS/default.js"></script>
     <script src="JS/js.js"></script>
 </head>
 
@@ -30,41 +30,45 @@
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="logout.php">Logout Now</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="Order.html">Orders</a></li>
-                        <li><a href="store.html">Store</a></li>
+                        <a href="javascript:void(0);" class="navIcon">
+                            <i class="fa fa-bars"></i> Menu
+                        </a>
+                        <div class="nav">
+                            <li id="Login"></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="Order.html">Orders</a></li>
+                            <li><a href="index.html">Store</a></li>
+                        </div>
                         <!--<li><a href="#">Your Cart</a></li>-->
                     </ul>
                 </nav>
             </div>
         </div>
-    </div>
-    <section class="layout-top">
-        <div class="box1"> </div>
-    </section>
-    <div id="fullpage">
-        <section class="section" id="WIP">
-            <article>
-                <h1>Order Complete</h1>
-                <p>Our team is processing your order</p>
-                <p>We will send you a email about your Enquiry</p>
-                <p>Payment will be make later on</p>
-            </article>
+        <section class="layout-top">
+            <div class="box1"> </div>
         </section>
-        <footer class="section" id="footer">
-            <div id="social">
-                <ul>
-                    <li><i class="fab fa-facebook"></i></li>
-                    <li><i class="fab fa-instagram"></i></li>
-                    <li><i class="fab fa-twitter-square"></i></li>
-                    <li><i class="fab fa-telegram"></i></li>
-                </ul>
-                <p>© 2018 Cocoland Inc. All Rights Reserved</p>
-            </div>
-        </footer>
-    </div>
+        <div id="fullpage">
+            <section class="section" id="WIP">
+                <article>
+                    <h1>Order Complete</h1>
+                    <p>Our team is processing your order</p>
+                    <p>We will send you a email about your Enquiry</p>
+                    <p>Payment will be make later on</p>
+                </article>
+            </section>
+            <footer class="section" id="footer">
+                <div id="social">
+                    <ul>
+                        <li><i class="fab fa-facebook"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+                        <li><i class="fab fa-twitter-square"></i></li>
+                        <li><i class="fab fa-telegram"></i></li>
+                    </ul>
+                    <p>© 2018 Cocoland Inc. All Rights Reserved</p>
+                </div>
+            </footer>
+        </div>
 </body>
 
 </html>

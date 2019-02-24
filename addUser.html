@@ -13,8 +13,8 @@
     <script src="JS/jquery-3.3.1.min.js"></script>
     <script src="JS/fullpage.js"></script>
     <script src="JS/jquery.md5.js"></script>
-    <script src="JS/login_check.js"></script>
-    <script src="JS/add.js"></script>
+    <script src="JS/default.js"></script>
+    <script src="JS/admin.js"></script>
 </head>
 
 <body>
@@ -31,11 +31,16 @@
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="logout.php">Logout Now</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="Order.html">Orders</a></li>
-                        <li><a href="store.html">Store</a></li>
+                        <a href="javascript:void(0);" class="navIcon">
+                            <i class="fa fa-bars"></i> Menu
+                        </a>
+                        <div class="nav">
+                            <li id="Login"></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="Order.html">Orders</a></li>
+                            <li><a href="index.html">Store</a></li>
+                        </div>
                         <!--<li><a href="#">Your Cart</a></li>-->
                     </ul>
                 </nav>
