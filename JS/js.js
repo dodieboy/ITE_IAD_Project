@@ -10,7 +10,32 @@ $(document).ready(function() {
         showSummary();
     });
     $(".summary").hide();
+    if ($(location).attr('pathname').indexOf('cart.html') >= 0) {
+        showTable();
+    }
 });
+
+function showTable() {
+    $.ajax({
+        type: "POST",
+        url: 'cart.php',
+        dataType: 'json',
+        success: function(data) {
+            console.log(data);
+            var tables = "<table align=center id='cartTable'><tr><th>Name</th><th>Quantity</th><th>Price</th><th>Total</th><th>Action</th></tr>";
+            var x = 0
+            for (var i = 0; i < (data.length / 4); i++) {
+                tables += "<tr class='uData' title='Click to edit' onClick='getId(this)'><td>" + data[x] + "</td><td>" + data[x + 1] + "</td><td id>" + data[x + 2] + "</td><td>" + data[x + 3] + "</td><td>" + data[x + 4] + "</td></tr>"
+                x += 5
+            }
+            tables += "</table>"
+            $('#table').html(tables);
+        },
+        error: function() {
+            alert("error");
+        }
+    })
+}
 
 function productAdd() {
     if (Math.floor($("#quantitys").val()) == $("#quantitys").val() && $.isNumeric($("#quantitys").val()) && $("#quantitys").val() > 0) {

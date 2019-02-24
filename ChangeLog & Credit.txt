@@ -393,3 +393,14 @@ V5.0.2
 	1.added webkit video player support for mobile
 	2.improve the store.html layout for mobile
 	3.improve the about.html layout for mobile
+
+V5.1.0
+	WIP:
+	1.cart system (added cart.php & addcart.php & cart.html)
+
+	Todo:
+	1.cart.html design
+	2.must login to add to cart
+	3.total price in cart.html
+	4.cart count at nav
+	5.more thing that i havnt think yet :)
