@@ -378,3 +378,11 @@ V5.0.0
 	3.nestle-100-grand-candy-bar.jpg
 	4.snickers-singles.jpg
 	5.whatchamacallit-candy-bar.jpg
+
+V5.0.1
+	Change:
+	1.improve footer centering code
+	2.now using fontawesome min version
+
+	Removed:
+	1.respond.min.js

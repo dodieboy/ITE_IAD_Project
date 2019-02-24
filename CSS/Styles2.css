@@ -340,8 +340,8 @@ footer {
 #social {
     position: absolute;
     top: 65%;
-    left: 45%;
-    transform: translate(-40%, -40%)
+    width: 100%;
+    transform: translate(0, -40%)
 }
 
 #social li {
@@ -597,8 +597,7 @@ p.wrong.shake {
     #social {
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-53%, -50%);
+        transform: translate(0, -50%);
     }
     #social li {
         margin: 10px 30px;

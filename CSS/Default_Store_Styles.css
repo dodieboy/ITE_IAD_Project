@@ -249,8 +249,8 @@ footer {
     position: absolute;
     text-align: center;
     bottom: 0;
-    left: 20%;
-    transform: translate(-10%, -40%)
+    width: 100%;
+    transform: translate(0, -40%)
 }
 
 #social li {
@@ -296,8 +296,6 @@ footer ul {
 #contact #social {
     position: absolute;
     bottom: 30%;
-    left: 20%;
-    transform: translate(-10%, 0)
 }
 
 
@@ -307,8 +305,7 @@ footer ul {
     /* footer */
     #social {
         bottom: 0;
-        left: 40%;
-        transform: translate(-30%, -40%)
+        transform: translate(0, -40%)
     }
     #social li {
         padding: 15px 15px;
@@ -316,8 +313,6 @@ footer ul {
     #contact #social {
         position: absolute;
         bottom: 30%;
-        left: 40%;
-        transform: translate(-32%, 0)
     }
     #contact {
         padding-top: 35vh;
@@ -429,8 +424,7 @@ footer ul {
     /* footer */
     #social {
         bottom: 20%;
-        left: 50%;
-        transform: translate(-53%, -50%);
+        transform: translate(0, -50%);
     }
     #social li {
         margin: 10px 30px;
@@ -449,8 +443,6 @@ footer ul {
     #contact #social {
         position: absolute;
         bottom: 35%;
-        left: 40%;
-        transform: translate(-20%, 0)
     }
     #contact p {
         margin: 5px;
