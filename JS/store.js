@@ -26,7 +26,7 @@ function price() {
     })
 }
 
-function addCart(pId, pName, pPrice) {
+function addCart(pId, pName, pPrice, buttons) {
     $.ajax({
         type: "POST",
         url: 'addCart.php',
@@ -38,7 +38,17 @@ function addCart(pId, pName, pPrice) {
             quantity: "1"
         },
         success: function(data) {
-            alert(data);
+            if (data == "Item Added") {
+                var temp = $(buttons).val() + ' &#127851;';
+                cart_check();
+                $(buttons).html("Added to cart" + ' &#128076;');
+                window.setTimeout(function() {
+                    $(buttons).html(temp);
+                }, 1000);
+            } else {
+                alert(data);
+            }
         }
     })
+
 }

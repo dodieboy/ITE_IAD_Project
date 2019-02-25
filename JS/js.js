@@ -70,18 +70,3 @@ function updateTable(row) {
         })
     }
 }
-
-function productAdd() {
-    if (Math.floor($("#quantitys").val()) == $("#quantitys").val() && $.isNumeric($("#quantitys").val()) && $("#quantitys").val() > 0) {
-        $('#quantityLabel').text("Quantity:");
-        $('#quantityLabel').css({ "color": "black", "font-weight": "normal" })
-        if ($("#orderTable tbody").length == 0) {
-            $("#orderTable").append("<tbody></tbody>");
-        }
-        $("#orderTable tbody").append("<tr>" + "<th>" + genID() + "</th>" + "<th id='dataProduct'>" + $("#products").val() + "</th>" + "<th id='dataQuantity'>" + $("#quantitys").val() + "</th>" + "<td>" + "<input type='button' style='margin-right: 5px;' onClick='productEdit(this);' value='Edit' id='btnEdit'/>" + "<button onClick='productDelete(this);'>Delete</button>" + "</td>" + "</tr>");
-    } else {
-        $('#quantityLabel').text("Quantity: (Please fill in a number!!!)");
-        $('#quantityLabel').css({ "color": "red", "font-weight": "bold" });
-        $('#quantitys').focus();
-    }
-}

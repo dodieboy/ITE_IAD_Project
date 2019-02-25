@@ -1,5 +1,6 @@
 $(document).ready(function() {
     login_check();
+    cart_check();
     $(".navIcon").click(function(event) {
         nav();
     });
@@ -12,12 +13,12 @@ function login_check() {
         dataType: 'json',
         success: function(data) {
             if (data[0].indexOf('fail') >= 0) {
-                $('#Login').html('<a href="login.html">Login Now</a>');
+                $('#navLogin').html('<a href="login.html">Login Now</a>');
                 if (($(location).attr('pathname').indexOf('admin.html') >= 0) || ($(location).attr('pathname').indexOf('addUser.html') >= 0) || ($(location).attr('pathname').indexOf('edit.html') >= 0)) {
                     window.location = 'index.html';
                 }
             } else {
-                $('#Login').html('<a href="logout.php">Logout Now</a>');
+                $('#navLogin').html('<a href="logout.php">Logout Now</a>');
                 if (($(location).attr('pathname').indexOf('register.html') >= 0) || ($(location).attr('pathname').indexOf('login.html') >= 0)) {
                     window.location = 'index.html';
                 }
@@ -30,6 +31,17 @@ function login_check() {
                     $('.UName').html('Welcome ' + '<b><a href="admin.html" class="user" title="Go admin portal">' + data[0] + '</a></b>');
                 }
             }
+        }
+    })
+}
+
+function cart_check() {
+    $.ajax({
+        type: "POST",
+        url: 'cartCheck.php',
+        dataType: 'json',
+        success: function(data) {
+            $("#navCart").html("Cart&#65077;" + data + "&#65078;");
         }
     })
 }

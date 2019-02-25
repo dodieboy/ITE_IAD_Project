@@ -405,9 +405,18 @@ V5.1.1
 	Removed:
 	1.order.html & OrderComplete.html & style2.css
 
+V5.1.2
+	Added:
+	1.a "added to cart" animation when item added to cart
+	2.user must login to add to cart
+	3.cart count at nav
+
+	Removed:
+	1.order.html from nav
+
 	Todo:
 	1.cart.html design
-	2.must login to add to cart
-	3.cart count at nav
-	4.cart send to database
+	2.cart count at nav
+	3.cart send to database
+	4.delete cart and clear cart
 	5.more thing that i havnt think yet :)
