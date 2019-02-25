@@ -1,5 +1,10 @@
 <?php
 session_start();
-$count = count($_SESSION["shopping_cart"]);
+if(isset($_SESSION["shopping_cart"])){
+    $count = count($_SESSION["shopping_cart"]);
+}
+else{
+    $count = 0;
+}
 echo $count;
 ?>

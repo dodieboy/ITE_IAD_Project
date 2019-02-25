@@ -39,7 +39,6 @@ function cart_check() {
     $.ajax({
         type: "POST",
         url: 'cartCheck.php',
-        dataType: 'json',
         success: function(data) {
             $("#navCart").html("Cart&#65077;" + data + "&#65078;");
         }

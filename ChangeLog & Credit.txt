@@ -414,9 +414,19 @@ V5.1.2
 	Removed:
 	1.order.html from nav
 
+V5.1.3
+	Added:
+	1.clear cart button at cart.html
+	2.clearCart() to delete produce from cart
+
+	Change:
+	1.renamed js.js to cart.js
+	2.slower the speed of "added to cart" animation
+
+	Fixed:
+	1.cartCheck.php error "shopping_cart" undifined
+
 	Todo:
 	1.cart.html design
-	2.cart count at nav
-	3.cart send to database
-	4.delete cart and clear cart
-	5.more thing that i havnt think yet :)
+	2.cart send to database
+	3.more thing that i havnt think yet :)

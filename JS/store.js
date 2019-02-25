@@ -44,7 +44,7 @@ function addCart(pId, pName, pPrice, buttons) {
                 $(buttons).html("Added to cart" + ' &#128076;');
                 window.setTimeout(function() {
                     $(buttons).html(temp);
-                }, 1000);
+                }, 1500);
             } else {
                 alert(data);
             }
