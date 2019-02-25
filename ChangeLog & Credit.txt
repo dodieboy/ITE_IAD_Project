@@ -426,7 +426,16 @@ V5.1.3
 	Fixed:
 	1.cartCheck.php error "shopping_cart" undifined
 
+V5.1.4
+	Added:
+	1.payment.html
+	2.checkout botton at cart.html
+	3.cleave.min.js (a validate plugin)
+
+	Change:
+	1.shorten repeated code in cart.js
+
 	Todo:
-	1.cart.html design
+	1.cart.html & payment.html design
 	2.cart send to database
 	3.more thing that i havnt think yet :)

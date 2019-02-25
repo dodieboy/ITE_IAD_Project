@@ -203,6 +203,14 @@
         background-color: #F59C1E;
     }
     
+    .adminContainer {
+        margin: 0 4%;
+        width: 92%;
+        min-height: 100vh;
+        text-align: center;
+        background-color: #F59C1E;
+    }
+    
     .contant h1 {
         font-size: 35px;
         margin: 15px 0;
@@ -298,6 +306,12 @@
     
     .inputs::placeholder {
         color: #FFF;
+    }
+    
+    #PaymentForm p {
+        text-align: start;
+        width: 100%;
+        margin: 0;
     }
     /*###################
 		footer
@@ -420,6 +434,10 @@
             display: table-cell;
         }
         .userContainer {
+            margin: 0 10%;
+            width: 80%;
+        }
+        .adminContainer {
             margin: 0 6%;
             width: 88%;
         }

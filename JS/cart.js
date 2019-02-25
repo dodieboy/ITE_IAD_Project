@@ -14,6 +14,7 @@ function showTable() {
         url: 'cart.php',
         dataType: 'json',
         success: function(data) {
+            console.log(data);
             cart_check();
             if (data == "empty") {
                 $('#table').html("<p>Cart is empty</p>");
@@ -24,7 +25,7 @@ function showTable() {
                     tables += "<tr class='uData' title='Click to edit'><td class='pName'>" + data[x + 1] + "</td><td><input onKeyUp='updateTable(" + (x + 4) / 4 + ")' type='text' class='pQuantity' value= '" + data[x + 3] + "'></td><td class='pPrice'>$" + data[x + 2] + "</td><td class='total'>$" + (data[x + 3] * data[x + 2]).toFixed(2) + "</td><td><a href='javascript:void(0)' onClick='removeProduce(" + (x + 4) / 4 + ")'>Remove</a></td><td style='display:none' class='pId'>" + data[x] + "</td></tr>"
                     x += 4
                 }
-                tables += "<tr><td></td><td></td><td>Total:</td><td id='sumTotal'></td></tr></table>"
+                tables += "<tr><td></td><td></td><td>Total:</td><td id='sumTotal'></td></tr><tr><td></td><td></td><td></td><td></td><td><button type='button' onClick='checkOut()' title='Check out now'>Check Out</button></td></tr></table>"
                 $('#table').html(tables);
                 sumTotal()
             }
@@ -50,26 +51,7 @@ function updateTable(row) {
     var total = (quantity * price).toFixed(2);
     sumTotal()
     $('#cartTable').find('tr:eq(' + row + ')').children('td.total').text("$" + total);
-    for (var i = 1; i < $('#cartTable tr').length; i++) {
-        var pId = $('#cartTable').find('tr:eq(' + i + ')').find('td.pId').text();
-        var pName = $('#cartTable').find('tr:eq(' + i + ')').find('td.pName').text();
-        var pQuantity = $('#cartTable').find('tr:eq(' + i + ')').find('input').val();
-        var pPrice = $('#cartTable').find('tr:eq(' + i + ')').children('td.pPrice').text().replace(/[$]/g, '');
-        $.ajax({
-            type: "POST",
-            url: 'addCart.php',
-            data: {
-                type: "update" + i,
-                id: pId,
-                name: pName,
-                price: pPrice.replace(/[$]/g, ''),
-                quantity: pQuantity
-            },
-            error: function() {
-                alert("error");
-            }
-        })
-    }
+    updateTable2();
 }
 
 function updateTable2() {
@@ -78,9 +60,7 @@ function updateTable2() {
         var pName = $('#cartTable').find('tr:eq(' + i + ')').find('td.pName').text();
         var pQuantity = $('#cartTable').find('tr:eq(' + i + ')').find('input').val();
         var pPrice = $('#cartTable').find('tr:eq(' + i + ')').children('td.pPrice').text().replace(/[$]/g, '');
-        if (pName == "") {
-
-        } else {
+        if (pName == "") {} else {
             $.ajax({
                 type: "POST",
                 url: 'addCart.php',
@@ -121,4 +101,8 @@ function clearCart() {
 function removeProduce(row) {
     $('#cartTable').find('tr:eq(' + row + ')').remove();
     updateTable2();
+}
+
+function checkOut() {
+    window.location = 'payment.html';
 }
