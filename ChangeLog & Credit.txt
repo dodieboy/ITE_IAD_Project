@@ -435,7 +435,15 @@ V5.1.4
 	Change:
 	1.shorten repeated code in cart.js
 
+V5.1.5
+	Added:
+	1.cleave-phone.sg.js
+	2.cleave & normal validation for payment.html
+
+	Change:
+	1.payment.html design done
+
 	Todo:
-	1.cart.html & payment.html design
-	2.cart send to database
+	1.cart.html design
+	2.send cart & payment detail to database
 	3.more thing that i havnt think yet :)
