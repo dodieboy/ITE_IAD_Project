@@ -466,6 +466,13 @@ V5.1.7
 	1.cart get cleared when changing quantity
 	2.tab name for admin.html & addUser.html & edit.html & cart.html & payment.html is wrong
 
-	Todo:
-	1.send cart & payment detail to database
-	2.more thing that i havnt think yet :)
+V5.1.8
+	Added:
+	1.cart & payment detail send to database system
+	
+	Removed:
+	1.debuging code in payment.html
+	2.remove js.js from OrderComplete.html
+	
+	Known bug(not fix):
+	1.total sum is not send to database

@@ -1,13 +1,17 @@
 $(document).ready(function() {
     showTable();
     $('#btnRefresh').click(function(event) {
-        showTable()
+        showTable();
     })
     $('#btnClear').click(function(event) {
-        clearCart()
+        clearCart();
     })
     $('#btnBack').click(function(event) {
         window.location = 'cart.html';
+    })
+    $('#checkOutFrom').on("submit", function(e) {
+        e.preventDefault();
+        orderProduce();
     })
 });
 
@@ -114,5 +118,55 @@ function removeProduce(row) {
 }
 
 function checkOut() {
-    window.location = 'payment.html';
+    for (var i = 1; i < $('#cartTable tr').length; i++) {
+        var pId = $('#cartTable').find('tr:eq(' + i + ')').find('td.pId').text();
+        var pName = $('#cartTable').find('tr:eq(' + i + ')').find('td.pName').text();
+        var pQuantity = $('#cartTable').find('tr:eq(' + i + ')').find('input').val();
+        var pPrice = $('#cartTable').find('tr:eq(' + i + ')').children('td.pPrice').text().replace(/[$]/g, '');
+        var totals = $('#cartTable').find('tr:eq(' + i + ')').children('td#sumTotal').text().replace(/[$]/g, '');
+        if (pName == "") {} else {
+            $.ajax({
+                type: "POST",
+                url: 'addCart.php',
+                data: {
+                    type: "update" + i,
+                    total: totals,
+                    id: pId,
+                    name: pName,
+                    price: pPrice.replace(/[$]/g, ''),
+                    quantity: pQuantity
+                },
+                success: function(data) {
+                    alert(data);
+                    window.location = 'payment.html';
+                },
+                error: function() {
+                    alert("error");
+                }
+            })
+        }
+    }
+}
+
+function orderProduce() {
+    if ($("#cardOutput").text() != "Card type: Not vaild") {
+        $.ajax({
+            type: "POST",
+            url: 'order.php',
+            data: $('#checkOutFrom').serialize(),
+            success: function(data) {
+                alert(data);
+                //window.location = 'OrderComplete.html';
+            },
+            error: function() {
+                alert("error");
+            }
+        })
+    } else {
+        $("#card").focus();
+        $("#cardOutput").html("Card type: Not vaild").css({
+            'color': 'red',
+            'font-weight': 'bold'
+        });
+    }
 }

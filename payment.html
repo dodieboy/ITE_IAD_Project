@@ -53,21 +53,21 @@
             <div class="topBox"></div>
             <div class="userContainer">
                 <h1>Check Out</h1>
-                <form id="checkOutFrom">
+                <form id="checkOutFrom" method="POST">
                     <ul class="flex-outer" id="DeliveryForm">
                         <h2>Delivery Infomation</h2>
                         <div>
                             <li>
                                 <label for="name">Receiver Name:</label>
-                                <input type="text" class="inputs" id="name" placeholder="Receiver Name*" required="required">
+                                <input type="text" class="inputs" id="name" name="rName" placeholder="Receiver Name*" required="required">
                             </li>
                             <li>
                                 <label for="phone">Phone Number:</label>
-                                <input type="tel" class="inputs" id="phone" placeholder="Phone Number*" required="required">
+                                <input type="text" class="inputs" id="phone" name="rPhone" placeholder="Phone Number*" required="required">
                             </li>
                             <li>
                                 <label for="address">Address:</label>
-                                <textarea rows="3" class="inputs" id="address" placeholder="Your Address*" required="required"></textarea>
+                                <textarea rows="3" class="inputs" id="address" name="rAddress" placeholder="Your Address*" required="required"></textarea>
                             </li>
                         </div>
                     </ul>
@@ -127,15 +127,21 @@
         var cleaveCard = new Cleave('#card', {
             creditCard: true,
             onCreditCardTypeChanged: function(type) {
-                console.log(type);
-                if ($("#card").val() == "") {
-                    $("#cardOutput").html("");
-                } else if (type == "visa") {
-                    $("#cardOutput").html("Card type: Visa");
+                if (type == "visa") {
+                    $("#cardOutput").html("Card type: Visa").css({
+                        'color': 'black',
+                        'font-weight': 'normal'
+                    });
                 } else if (type == "mastercard") {
-                    $("#cardOutput").html("Card type: Master");
+                    $("#cardOutput").html("Card type: Master").css({
+                        'color': 'black',
+                        'font-weight': 'normal'
+                    });
                 } else {
-                    $("#cardOutput").html("Card type: Not vaild");
+                    $("#cardOutput").html("Card type: Not vaild").css({
+                        'color': 'red',
+                        'font-weight': 'bold'
+                    });
                 }
             }
         });
