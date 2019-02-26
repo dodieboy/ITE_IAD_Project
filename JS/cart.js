@@ -119,12 +119,13 @@ function removeProduce(row) {
 
 function checkOut() {
     for (var i = 1; i < $('#cartTable tr').length; i++) {
+        console.log(i);
         var pId = $('#cartTable').find('tr:eq(' + i + ')').find('td.pId').text();
         var pName = $('#cartTable').find('tr:eq(' + i + ')').find('td.pName').text();
         var pQuantity = $('#cartTable').find('tr:eq(' + i + ')').find('input').val();
         var pPrice = $('#cartTable').find('tr:eq(' + i + ')').children('td.pPrice').text().replace(/[$]/g, '');
-        var totals = $('#cartTable').find('tr:eq(' + i + ')').children('td#sumTotal').text().replace(/[$]/g, '');
-        if (pName == "") {} else {
+        var totals = $('#sumTotal').text();
+        if (pName != "") {
             $.ajax({
                 type: "POST",
                 url: 'addCart.php',
@@ -137,7 +138,7 @@ function checkOut() {
                     quantity: pQuantity
                 },
                 success: function(data) {
-                    alert(data);
+                    clearCart();
                     window.location = 'payment.html';
                 },
                 error: function() {
@@ -154,9 +155,8 @@ function orderProduce() {
             type: "POST",
             url: 'order.php',
             data: $('#checkOutFrom').serialize(),
-            success: function(data) {
-                alert(data);
-                //window.location = 'OrderComplete.html';
+            success: function() {
+                window.location = 'OrderComplete.html';
             },
             error: function() {
                 alert("error");

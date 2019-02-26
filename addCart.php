@@ -5,8 +5,11 @@
 			unset($_SESSION["shopping_cart"]);
 		}
 		else{
-			if($_POST["type"]=='update1'){
-				unset($_SESSION["shopping_cart"]);
+			if(strrpos($_POST["type"], "update")!==false){
+				if($_POST["type"] == "update1"){
+					unset($_SESSION["shopping_cart"]);
+					$_SESSION["totalPrice"] = $_POST["total"];
+				}
 			}
 			if(isset($_SESSION["shopping_cart"]))
 			{
