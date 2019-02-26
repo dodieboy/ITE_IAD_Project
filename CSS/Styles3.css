@@ -313,6 +313,31 @@
         width: 100%;
         margin: 0;
     }
+    
+    #tName {
+        max-width: 40%;
+    }
+    
+    #tQuantity {
+        width: 8%;
+    }
+    
+    #tPrice {
+        width: 12%;
+    }
+    
+    #tTotal {
+        width: 15%;
+    }
+    
+    #tAction {
+        width: 15%;
+    }
+    
+    .pQuantity {
+        width: 60%;
+        margin: 0 20%;
+    }
     /*###################
 		footer
 ###################*/

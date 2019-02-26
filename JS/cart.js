@@ -6,6 +6,9 @@ $(document).ready(function() {
     $('#btnClear').click(function(event) {
         clearCart()
     })
+    $('#btnBack').click(function(event) {
+        window.location = 'cart.html';
+    })
 });
 
 function showTable() {
@@ -14,15 +17,14 @@ function showTable() {
         url: 'cart.php',
         dataType: 'json',
         success: function(data) {
-            console.log(data);
             cart_check();
             if (data == "empty") {
                 $('#table').html("<p>Cart is empty</p>");
             } else {
-                var tables = "<table align=center id='cartTable'><tr><th>Name</th><th>Quantity</th><th>Price</th><th>Total</th><th>Action</th></tr>";
+                var tables = "<table align=center id='cartTable'><tr><th id='tName'>Name</th><th id='tQuantity'>Quantity</th><th id='tPrice'>Price</th><th id='tTotal'>Total</th><th id='tAction'>Action</th></tr>";
                 var x = 0;
                 for (var i = 0; i < (data.length / 4); i++) {
-                    tables += "<tr class='uData' title='Click to edit'><td class='pName'>" + data[x + 1] + "</td><td><input onKeyUp='updateTable(" + (x + 4) / 4 + ")' type='text' class='pQuantity' value= '" + data[x + 3] + "'></td><td class='pPrice'>$" + data[x + 2] + "</td><td class='total'>$" + (data[x + 3] * data[x + 2]).toFixed(2) + "</td><td><a href='javascript:void(0)' onClick='removeProduce(" + (x + 4) / 4 + ")'>Remove</a></td><td style='display:none' class='pId'>" + data[x] + "</td></tr>"
+                    tables += "<tr class='uData' title='Click to edit'><td class='pName'>" + data[x + 1] + "</td><td><input onKeyUp='updateTable(" + (x + 4) / 4 + ")' type='text' class='pQuantity' value='" + data[x + 3] + "'></td><td class='pPrice'>$" + data[x + 2] + "</td><td class='total'>$" + (data[x + 3] * data[x + 2]).toFixed(2) + "</td><td><a href='javascript:void(0)' onClick='removeProduce(" + (x + 4) / 4 + ")'>Remove</a></td><td style='display:none' class='pId'>" + data[x] + "</td></tr>"
                     x += 4
                 }
                 tables += "<tr><td></td><td></td><td>Total:</td><td id='sumTotal'></td></tr><tr><td></td><td></td><td></td><td></td><td><button type='button' onClick='checkOut()' title='Check out now'>Check Out</button></td></tr></table>"
@@ -42,7 +44,7 @@ function sumTotal() {
         var total = $('#cartTable').find('tr:eq(' + i + ')').find('td.total').text().replace(/[$]/g, '')
         y = (y + total * 1);
     }
-    $("#sumTotal").html('$' + y);
+    $("#sumTotal").html('$' + y.toFixed(2));
 }
 
 function updateTable(row) {
@@ -56,6 +58,10 @@ function updateTable(row) {
 
 function updateTable2() {
     for (var i = 1; i < $('#cartTable tr').length; i++) {
+        if (i < 3) {
+            clearCart();
+            return;
+        }
         var pId = $('#cartTable').find('tr:eq(' + i + ')').find('td.pId').text();
         var pName = $('#cartTable').find('tr:eq(' + i + ')').find('td.pName').text();
         var pQuantity = $('#cartTable').find('tr:eq(' + i + ')').find('input').val();
