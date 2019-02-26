@@ -210,20 +210,7 @@ section article {
     font-size: 22px;
 }
 
-#headWIP h1 {
-    font-size: 35px;
-    color: #F59C1E;
-    margin: 0;
-    padding-top: 42vh;
-}
-
-#headWIP h2 {
-    font-size: 32px;
-    color: #FFF;
-    margin: 0;
-}
-
-#WIP {
+#Complete {
     position: absolute;
     left: 10%;
     right: 10%;
@@ -233,17 +220,17 @@ section article {
     font-size: 30px;
 }
 
-#WIP article {
-    padding-top: 40vh;
+#Complete article {
+    padding-top: 35vh;
     width: 100%;
 }
 
-#WIP h1 {
-    font-size: 35px;
+#Complete h1 {
+    font-size: 40px;
     margin: 10px 0;
 }
 
-#WIP p {
+#Complete p {
     background-color: #F59C1E;
     margin: 0;
     font-size: 22px;
@@ -426,22 +413,18 @@ footer ul {
         padding-top: 39vh;
         width: 100%;
     }
-    #headWIP h1 {
-        font-size: 42px;
-        padding-top: 33vh;
-    }
-    #headWIP h2 {
-        font-size: 35px;
-    }
-    #WIP {
+    #Complete {
         left: 12%;
         right: 12%;
         width: 76%;
     }
-    #WIP h1 {
+    #Complete article {
+        padding-top: 40vh;
+    }
+    #Complete h1 {
         font-size: 48px;
     }
-    #WIP p {
+    #Complete p {
         padding: 10px 0;
         font-size: 25px;
     }

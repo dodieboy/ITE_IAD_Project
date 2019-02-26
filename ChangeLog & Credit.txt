@@ -451,6 +451,21 @@ V5.1.6
 	1.total at payment.html is not 2 decimal place
 	2.remove produce in cart, if it only have 1 produce, it will not remove
 
+V5.1.7
+	Added:
+	1.support of cleave for quantity textbox in cart.html, it only allow number to tybe now
+	2.added back OrderComplete.html and updated the layout
+	3.orders table in mySQL database
+
+	Change:
+	1.improve cart.html design
+	2.improve the total price calulation system in cart.html
+	3.cursor when hover on label will no longer show pointer clicker
+
+	Fixed:
+	1.cart get cleared when changing quantity
+	2.tab name for admin.html & addUser.html & edit.html & cart.html & payment.html is wrong
+
 	Todo:
 	1.send cart & payment detail to database
 	2.more thing that i havnt think yet :)

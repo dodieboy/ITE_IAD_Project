@@ -299,9 +299,10 @@ fieldset {
 
 /* Indicate that 'label' will shift focus to the associated form element */
 
-label {
+
+/* label {
     cursor: pointer;
-}
+} */
 
 
 /*

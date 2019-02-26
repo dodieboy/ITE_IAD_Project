@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cocoland | Orders</title>
+    <title>Cocoland | Check Out</title>
     <link rel="icon" href="img/logo2.png">
     <link href="CSS/boilerplate.css" rel="stylesheet" type="text/css">
     <link href="CSS/Styles3.css" rel="stylesheet" type="text/css">
@@ -83,14 +83,16 @@
                                 <label for="card">Card Number:</label>
                                 <input type="text" class="inputs" id="card" placeholder="1234 1234 1234 1234" required="required">
                             </li>
-                            <li id="cardOutput"></li>
+                            <li>
+                                <label for="card" id="cardOutput"></label>
+                            </li>
                             <li>
                                 <label for="expiry">Expiry Date</label>
                                 <input type="text" class="inputs" id="expiry" placeholder="02/22" required="required">
                             </li>
                             <li>
                                 <label for="code">Security pin (cvv)</label>
-                                <input type="text" class="inputs" id="code" placeholder="789" required="required">
+                                <input type="text" class="inputs" id="code" placeholder="789" maxlength="3" required="required">
                             </li>
                         </div>
                     </ul>
@@ -122,7 +124,6 @@
         });
         cleavePhone.setPhoneRegionCode('SG');
         cleavePhone.setRawValue('');
-
         var cleaveCard = new Cleave('#card', {
             creditCard: true,
             onCreditCardTypeChanged: function(type) {
@@ -130,13 +131,25 @@
                 if ($("#card").val() == "") {
                     $("#cardOutput").html("");
                 } else if (type == "visa") {
-                    $("#cardOutput").html("Visa");
+                    $("#cardOutput").html("Card type: Visa");
                 } else if (type == "mastercard") {
-                    $("#cardOutput").html("Master");
+                    $("#cardOutput").html("Card type: Master");
                 } else {
-                    $("#cardOutput").html("Not vaild");
+                    $("#cardOutput").html("Card type: Not vaild");
                 }
             }
+        });
+        var cleaveNumeral = new Cleave('#code', {
+            numeral: true
+        });
+        var cleaveExpiry = new Cleave('#expiry', {
+            numeral: true,
+            numeralThousandsGroupStyle: 'wan'
+        });
+        var cleaveExpiry = new Cleave('#expiry', {
+            blocks: [2, 2],
+            delimiter: '/',
+            uppercase: true
         });
     </script>
 </body>

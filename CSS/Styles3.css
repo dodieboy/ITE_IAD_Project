@@ -314,29 +314,30 @@
         margin: 0;
     }
     
-    #tName {
-        max-width: 40%;
+    #cartTable {
+        width: 100%;
     }
     
-    #tQuantity {
-        width: 8%;
+    #cartTable td {
+        word-break: break-word;
+        white-space: normal;
     }
     
-    #tPrice {
-        width: 12%;
-    }
-    
-    #tTotal {
-        width: 15%;
-    }
-    
-    #tAction {
-        width: 15%;
+    #cartTable button {
+        word-break: normal;
     }
     
     .pQuantity {
-        width: 60%;
+        width: 35px;
         margin: 0 20%;
+    }
+    
+    .tableTotal {
+        border-top: 1px solid black;
+    }
+    
+    .tableTotal td {
+        padding-top: 10px;
     }
     /*###################
 		footer
