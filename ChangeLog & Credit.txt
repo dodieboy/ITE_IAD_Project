@@ -488,3 +488,19 @@ V5.2.1
 	Change:
 	1.improve the nav when changing from desktop to mobile mode
 	2.improve cart look at nav in mobile mode
+
+V5.2.2
+	Added:
+	1.order list table to admin.php
+	2.admin panel to admin.php so admin can chose to see user info or orders list
+	3.orderTable.php
+	4.more error handling for checkOut()
+
+	Change:
+	1.correct a bit of my english
+	2.rename admin.php to userTable.php
+	3.orderDetail output formant
+	4.improve payment.html credit card validation
+
+	Fixed:
+	1.orderDetail is empty when send to database

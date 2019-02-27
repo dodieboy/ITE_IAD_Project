@@ -77,22 +77,22 @@
                         <div>
                             <li>
                                 <label for="name">Name on card:</label>
-                                <input type="text" class="inputs" id="name" placeholder="Ex. Alan Tan" required="required">
+                                <input type="text" class="inputs" id="name" placeholder="Ex. Alan Tan" required="required" title="Please fill in name on card">
                             </li>
                             <li>
                                 <label for="card">Card Number:</label>
-                                <input type="text" class="inputs" id="card" placeholder="1234 1234 1234 1234" required="required">
+                                <input type="text" class="inputs" id="card" placeholder="1234 1234 1234 1234" pattern="[0-9]{4}[\s]{1}[0-9]{4}[\s]{1}[0-9]{4}[\s]{1}[0-9]{4}" title="Invalid Card Number" required="required" autocomplete="off">
                             </li>
                             <li>
                                 <label for="card" id="cardOutput"></label>
                             </li>
                             <li>
                                 <label for="expiry">Expiry Date</label>
-                                <input type="text" class="inputs" id="expiry" placeholder="02/22" required="required">
+                                <input type="text" class="inputs" id="expiry" placeholder="02/22" maxlength="5" pattern="[0-9]{2}[/]{1}[0-9]{2}" title="Invalid Expiry Date" required="required" autocomplete="off">
                             </li>
                             <li>
                                 <label for="code">Security pin (cvv)</label>
-                                <input type="text" class="inputs" id="code" placeholder="789" maxlength="3" required="required">
+                                <input type="text" class="inputs" id="code" placeholder="789" maxlength="3" pattern="[0-9]{3}" title="Invalid Security pin" required="required" autocomplete="off">
                             </li>
                         </div>
                     </ul>

@@ -1,12 +1,16 @@
 $(document).ready(function() {
     if ($(location).attr('pathname').indexOf('admin.html') >= 0) {
-        showTable();
+        showUser();
+        showOrders();
     } else if ($(location).attr('pathname').indexOf('edit.html') >= 0) {
         var userName = JSON.parse(localStorage.getItem('userName'));
         loadUser(userName);
     }
     $('#btnRefresh').click(function(event) {
-        showTable()
+        showUser();
+    })
+    $('#btnRefresh2').click(function(event) {
+        showOrders();
     })
     $('#btnAdd').click(function(event) {
         window.location = 'addUser.html';
@@ -25,24 +29,55 @@ $(document).ready(function() {
         e.preventDefault();
         create();
     })
+    $('#btnUser').click(function(event) {
+        $('.ordersTableFrom').slideUp(200);
+        $('.userTableFrom').delay(300).slideDown(300);
+    })
+    $('#btnOrders').click(function(event) {
+        $('.userTableFrom').slideUp(200);
+        $('.ordersTableFrom').delay(300).slideDown(300);
+    })
 })
 
 var uPassword;
 
-function showTable() {
+function showUser() {
     $.ajax({
         type: "POST",
-        url: 'admin.php',
+        url: 'userTable.php',
         dataType: 'json',
         success: function(data) {
-            var tables = "<table align=center id='adminTable'><tr><th>User Name</th><th>Name</th><th id='password'>Password</th><th>Email</th><th id='gender'>Gender</th><th id='phone'>Phone</th><th>Role</th></tr>";
+            var tables = "<table align=center class='Table'><tr><th>User Name</th><th>Name</th><th id='password'>Password</th><th>Email</th><th id='gender'>Gender</th><th id='phone'>Phone</th><th>Role</th></tr>";
             var x = 0
             for (var i = 0; i < (data.length / 7); i++) {
                 tables += "<tr class='uData' title='Click to edit' onClick='getId(this)'><td class='uName'>" + data[x] + "</td><td>" + data[x + 1] + "</td><td id='password'>" + data[x + 2] + "</td><td>" + data[x + 3] + "</td><td id='gender'>" + data[x + 4] + "</td><td id='phone'>" + data[x + 5] + "</td><td>" + data[x + 6] + "</td></tr>"
                 x += 7
             }
             tables += "</table>"
-            $('#table').html(tables);
+            $('#userTable').html(tables);
+        },
+        error: function() {
+            alert("error");
+        }
+    })
+}
+
+function showOrders() {
+    $.ajax({
+        type: "POST",
+        url: 'orderTable.php',
+        dataType: 'json',
+        success: function(data) {
+            var tables = "<table align=center class='Table'><tr><th class='oID'>ID</th><th>Order Detail</th><th class='oPaid'>Paid</th><th>Receiver Name</th><th >Phone</th><th>Address</th></tr>";
+            var x = 0
+            for (var i = 0; i < (data.length / 6); i++) {
+                var y = data[x + 1];
+                y = y.replace(/,/g, "<br/>");
+                tables += "<tr class='uData'><td class='oID'>" + data[x] + "</td><td>" + y + "</td><td class='oPaid'>" + data[x + 2] + "</td><td>" + data[x + 3] + "</td><td>" + data[x + 4] + "</td><td>" + data[x + 5] + "</td></tr>"
+                x += 6
+            }
+            tables += "</table>"
+            $('#ordersTable').html(tables);
         },
         error: function() {
             alert("error");

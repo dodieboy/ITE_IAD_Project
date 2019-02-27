@@ -119,7 +119,6 @@ function removeProduce(row) {
 
 function checkOut() {
     for (var i = 1; i < $('#cartTable tr').length; i++) {
-        console.log(i);
         var pId = $('#cartTable').find('tr:eq(' + i + ')').find('td.pId').text();
         var pName = $('#cartTable').find('tr:eq(' + i + ')').find('td.pName').text();
         var pQuantity = $('#cartTable').find('tr:eq(' + i + ')').find('input').val();
@@ -138,7 +137,6 @@ function checkOut() {
                     quantity: pQuantity
                 },
                 success: function(data) {
-                    clearCart();
                     window.location = 'payment.html';
                 },
                 error: function() {
@@ -155,8 +153,14 @@ function orderProduce() {
             type: "POST",
             url: 'order.php',
             data: $('#checkOutFrom').serialize(),
-            success: function() {
-                window.location = 'OrderComplete.html';
+            success: function(data) {
+                if (data == "Added") {
+                    clearCart();
+                    window.location = 'OrderComplete.html';
+                } else {
+                    alert("Error\nPlease contact the administrator")
+                    console.log(data);
+                }
             },
             error: function() {
                 alert("error");

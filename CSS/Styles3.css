@@ -211,9 +211,13 @@
         background-color: #F59C1E;
     }
     
+    .adminContainer h1 {
+        border-bottom: 1px solid black;
+    }
+    
     .contant h1 {
         font-size: 35px;
-        margin: 15px 0;
+        margin: 20px 0;
     }
     
     .contant h2 {
@@ -222,9 +226,8 @@
         text-align: left;
     }
     
-    #adminTable {
-        max-width: 100%;
-        float: center;
+    .Table {
+        width: 100%;
         border: 0;
     }
     
@@ -234,20 +237,24 @@
         cursor: pointer;
     }
     
-    #adminTable th,
-    #adminTable td {
+    .Table th {
         padding: 0 5px;
+        border-bottom: 1px solid grey;
         border-top: 1px solid grey;
     }
     
-    #adminTable td {
+    .Table td {
         word-break: break-word;
         white-space: normal;
+        padding: 0 5px;
+        border-bottom: 1px solid grey;
     }
     
     #password,
     #gender,
-    #phone {
+    #phone,
+    .oID,
+    .oPaid {
         display: none;
     }
     
@@ -266,8 +273,14 @@
         margin: 0;
     }
     
-    #table {
+    #userTable,
+    #ordersTable {
         clear: both;
+    }
+    
+    .userTableFrom,
+    .ordersTableFrom {
+        display: none;
     }
     
     .flex-outer {
@@ -456,7 +469,9 @@
         ###################*/
         #password,
         #gender,
-        #phone {
+        #phone,
+        .oID,
+        .oPaid {
             display: table-cell;
         }
         .userContainer {

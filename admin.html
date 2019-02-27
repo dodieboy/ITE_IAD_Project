@@ -51,13 +51,27 @@
         <div class="Container">
             <div class="topBox"></div>
             <div class="adminContainer">
-                <h1>User Info</h1>
-                <div>
-                    <p class="userTips">*Click on the row to edit user info</p>
-                    <button type="button" id="btnRefresh" class="btnLeft" title="Refresh table"><i class="fas fa-sync-alt"></i></button>
-                    <input type="button" id="btnAdd" class="btnLeft" value="New User" title="Add new user">
+                <h1>Admin Panel</h1>
+                <input type="button" id="btnUser" value="User Info">
+                <input type="button" id="btnOrders" value="Orders List">
+                <div class="userTableFrom">
+                    <h2>User Info</h2>
+                    <div>
+                        <p class="userTips">*Click on the row to edit user info</p>
+                        <button type="button" id="btnRefresh" class="btnLeft" title="Refresh table"><i class="fas fa-sync-alt"></i></button>
+                        <input type="button" id="btnAdd" class="btnLeft" value="New User" title="Add new user">
+                    </div>
+                    <div id="userTable">
+                    </div>
                 </div>
-                <div id="table">
+                <div class="ordersTableFrom">
+                    <h2>Orders List</h2>
+                    <div>
+                        <p class="userTips">*Click on the row to edit user info</p>
+                        <button type="button" id="btnRefresh2" class="btnLeft" title="Refresh table"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                    <div id="ordersTable">
+                    </div>
                 </div>
             </div>
         </div>
