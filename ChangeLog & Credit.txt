@@ -504,3 +504,10 @@ V5.2.2
 
 	Fixed:
 	1.orderDetail is empty when send to database
+
+V5.2.3
+	Added:
+	1.more contact detail in contact.html
+
+	Fixed:
+	1.when changing width size or scroll up, footer may be broken
