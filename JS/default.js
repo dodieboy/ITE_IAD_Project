@@ -1,10 +1,26 @@
 $(document).ready(function() {
     login_check();
-    cart_check();
+    if ($(window).width() < 777) {
+        cart_check('mobile');
+    } else {
+        cart_check();
+    }
     $(".navIcon").click(function(event) {
         nav();
     });
 });
+
+$(window).resize(function() {
+    if ($(window).width() < 777) {
+        cart_check('mobile');
+        $(".nav").hide();
+        $(".header").height("auto");
+        $(".header").css('background-color', '');
+    } else {
+        cart_check();
+        $(".nav").show();
+    }
+})
 
 function login_check() {
     $.ajax({
@@ -35,14 +51,25 @@ function login_check() {
     })
 }
 
-function cart_check() {
-    $.ajax({
-        type: "POST",
-        url: 'cartCheck.php',
-        success: function(data) {
-            $("#navCart").html("Cart&#65077;" + data + "&#65078;");
-        }
-    })
+function cart_check(i) {
+    if (i == "mobile") {
+        $.ajax({
+            type: "POST",
+            url: 'cartCheck.php',
+            success: function(data) {
+                $("#navCart").html("Cart (" + data + ")");
+            }
+        })
+
+    } else {
+        $.ajax({
+            type: "POST",
+            url: 'cartCheck.php',
+            success: function(data) {
+                $("#navCart").html("Cart&#65077;" + data + "&#65078;");
+            }
+        })
+    }
 }
 
 function nav() {

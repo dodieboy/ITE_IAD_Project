@@ -483,3 +483,8 @@ V5.2.0
 	
 	Fixed:
 	1.total sum is not send to database
+
+V5.2.1
+	Change:
+	1.improve the nav when changing from desktop to mobile mode
+	2.improve cart look at nav in mobile mode
