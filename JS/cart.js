@@ -68,7 +68,7 @@ function updateTable(row) {
 
 function updateTable2() {
     for (var i = 1; i < $('#cartTable tr').length; i++) {
-        if ($('#cartTable tr').length == 2) {
+        if ($('#cartTable tr').length <= 3) {
             clearCart();
             return;
         }

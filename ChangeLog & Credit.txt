@@ -515,3 +515,8 @@ V5.2.3
 V5.2.4
 	Fixed:
 	1.nav height not correct for table mode
+
+V5.2.5
+	Fixed:
+	1.loaduser() error
+	2.cannot delete item if there is only 1

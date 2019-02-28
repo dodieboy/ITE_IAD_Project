@@ -47,7 +47,7 @@ function showUser() {
         url: 'userTable.php',
         dataType: 'json',
         success: function(data) {
-            var tables = "<table align=center class='Table'><tr><th>User Name</th><th>Name</th><th id='password'>Password</th><th>Email</th><th id='gender'>Gender</th><th id='phone'>Phone</th><th>Role</th></tr>";
+            var tables = "<table align=center class='Table' id='adminTable'><tr><th>User Name</th><th>Name</th><th id='password'>Password</th><th>Email</th><th id='gender'>Gender</th><th id='phone'>Phone</th><th>Role</th></tr>";
             var x = 0
             for (var i = 0; i < (data.length / 7); i++) {
                 tables += "<tr class='uData' title='Click to edit' onClick='getId(this)'><td class='uName'>" + data[x] + "</td><td>" + data[x + 1] + "</td><td id='password'>" + data[x + 2] + "</td><td>" + data[x + 3] + "</td><td id='gender'>" + data[x + 4] + "</td><td id='phone'>" + data[x + 5] + "</td><td>" + data[x + 6] + "</td></tr>"
