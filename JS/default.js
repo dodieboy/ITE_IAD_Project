@@ -11,7 +11,7 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-    if ($(window).width() < 777) {
+    if ($(window).width() < 985) {
         cart_check('mobile');
         $(".nav").hide();
         $(".header").height("auto");

@@ -511,3 +511,7 @@ V5.2.3
 
 	Fixed:
 	1.when changing width size or scroll up, footer may be broken
+
+V5.2.4
+	Fixed:
+	1.nav height not correct for table mode
