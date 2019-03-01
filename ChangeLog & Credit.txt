@@ -520,3 +520,7 @@ V5.2.5
 	Fixed:
 	1.loaduser() error
 	2.cannot delete item if there is only 1
+
+V5.3
+	Change:
+	1.update the SQL file
