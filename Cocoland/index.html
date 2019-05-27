@@ -1,0 +1,113 @@
+﻿<!--
+SPDX-Short-Identifier: MIT
+(c) 2019 Alan Tan
+This code is licensed under MIT license (See LICENSE.txt for details)
+-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cocoland | Store</title>
+    <link rel="icon" href="img/logo2.png">
+    <link href="CSS/Default_Store_Styles.css" rel="stylesheet" type="text/css">
+    <link href="CSS/store.css" rel="stylesheet" type="text/css">
+    <link href="CSS/fontawesome/css/all.min.css" rel="stylesheet">
+    <script src="JS/jquery-3.3.1.min.js"></script>
+    <script src="JS/default.js"></script>
+    <script src="JS/fullpage.js"></script>
+    <script src="JS/store.js"></script>
+</head>
+
+<body>
+    <div class="bg">
+        <video muted webkit-playsinline playsinline autoplay loop>
+            <source src="img/Bg2.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="header">
+        <div class="logo"><img src="img/logo1.png" />
+            <p class="UName"></p>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <a href="javascript:void(0);" class="navIcon">
+                        <i class="fa fa-bars"></i> Menu
+                    </a>
+                    <div class="nav">
+                        <li id="navLogin"></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html">Store</a></li>
+                        <li><a href="cart.html" id="navCart">Cart&#65077;0&#65078;</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="layout-top">
+    </section>
+    <section class="layout-bottom">
+    </section>
+    <div id="fullpage">
+        <section class="section">
+            <article id="head">
+                <h1>The land of your dreams</h1>
+            </article>
+        </section>
+        <section class="section" id="item1">
+            <article class="product">
+                <div id="itemImg">
+                    <figure><img src="img/hershey's-milk-chocolate.png" /></figure>
+                </div>
+                <div class="itemInfo">
+                    <p class="itemName" id="itemName1">Product 1</p>
+                    <p class="cart">
+                        <button style="vertical-align:middle" id="btnItemName1" onclick="addCart(1,$('#itemName1').text(),$('#itemPrice1').val(),'#itemPrice1')"><span id="itemPrice1">Add To Cart 	&#127851;</span></button>
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="section" id="item2">
+            <article class="product">
+                <div id="itemImg">
+                    <figure><img src="img/hershey's-skor-candy-bar.png" /></figure>
+                </div>
+                <div class="itemInfo">
+                    <p class="itemName" id="itemName2">Product 2</p>
+                    <p class="cart">
+                        <button style="vertical-align:middle" id="btnItemName2" onclick="addCart(2,$('#itemName2').text(),$('#itemPrice2').val(),'#itemPrice2')"><span id="itemPrice2">Add To Cart 	&#127851;</span></button>
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="section" id="item3">
+            <article class="product">
+                <div id="itemImg">
+                    <figure><img src="img/krackel-chocolate-bar.png" /></figure>
+                </div>
+                <div class="itemInfo">
+                    <p class="itemName" id="itemName3">Product 3</p>
+                    <p class="cart">
+                        <button style="vertical-align:middle" id="btnItemName3" onclick="addCart(3,$('#itemName3').text(),$('#itemPrice3').val(),'#itemPrice3')"><span id="itemPrice3">Add To Cart 	&#127851;</span></button>
+                    </p>
+                </div>
+            </article>
+        </section>
+        <footer class="section" id="footer">
+            <div id="social">
+                <ul>
+                    <li><i class="fab fa-facebook"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                    <li><i class="fab fa-twitter-square"></i></li>
+                    <li><i class="fab fa-telegram"></i></li>
+                </ul>
+                <p>© 2018 Cocoland Inc. All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

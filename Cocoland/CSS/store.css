@@ -1,0 +1,161 @@
+/*
+SPDX-Short-Identifier: MIT
+(c) 2019 Alan Tan
+This code is licensed under MIT license (See LICENSE.txt for details)
+*/
+/* animation*/
+
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+
+/* content */
+
+.cart button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.cart button span {
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.cart button:hover:after {
+    content: 'Add To Cart \1F6D2';
+}
+
+.cart button:hover span {
+    display: none;
+    padding-right: 25px;
+    transition: 0.5s;
+}
+
+section article #itemImg {
+    height: 52vh;
+    padding-top: 30vh;
+}
+
+.itemInfo {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+}
+
+.itemInfo p {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+#itemImg img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    vertical-align: baseline;
+}
+
+#itemImg figure {
+    position: relative;
+}
+
+#itemImg figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+#itemImg figure:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+
+
+/* Tablet Layout: 481px to 777px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+    .itemInfo {
+        bottom: 3vh;
+    }
+    section article #itemImg {
+        height: 56vh;
+        padding-top: 30vh;
+    }
+}
+
+
+/* Desktop Layout: 777px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 777px) {
+    /* content */
+    .product {
+        width: 100%;
+        height: 72vh;
+    }
+    #head {
+        width: 100%;
+        height: 100vh;
+    }
+    #itemImg img {
+        width: 60%;
+        max-width: 700px;
+        height: auto;
+    }
+    .itemInfo {
+        width: 92%;
+        left: 4%;
+        right: 4%;
+        bottom: 0;
+        text-align: start;
+    }
+    section article #itemImg {
+        height: 62vh;
+        padding-top: 30vh;
+    }
+    .itemInfo p {
+        font-size: 20px;
+    }
+    .itemName {
+        float: left;
+        padding-top: 13px;
+    }
+    .cart {
+        float: right;
+    }
+    .cart button {
+        font-size: 20px;
+        padding: 10px;
+        width: 200px;
+        margin: 5px;
+    }
+}

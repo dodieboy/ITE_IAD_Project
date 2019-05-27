@@ -530,3 +530,9 @@ V5.3.1
 	1.another SQL file if the first one dont work
 	Change:
 	1.added infinityfree host sql info to main.php
+
+V5.4
+	Added:
+	1.MIT lience
+	Change:
+	1.Reorganise all file

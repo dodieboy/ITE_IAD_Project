@@ -1,0 +1,168 @@
+<!--
+SPDX-Short-Identifier: MIT
+(c) 2019 Alan Tan
+This code is licensed under MIT license (See LICENSE.txt for details)
+-->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cocoland | Check Out</title>
+    <link rel="icon" href="img/logo2.png">
+    <link href="CSS/boilerplate.css" rel="stylesheet" type="text/css">
+    <link href="CSS/Styles3.css" rel="stylesheet" type="text/css">
+    <link href="CSS/fontawesome/css/all.min.css" rel="stylesheet">
+    <script src="JS/jquery-3.3.1.min.js"></script>
+    <script src="JS/fullpage.js"></script>
+    <script src="JS/cleave.min.js"></script>
+    <script src="JS/default.js"></script>
+    <script src="JS/cart.js"></script>
+</head>
+
+<body>
+    <div class="bg">
+        <video muted webkit-playsinline playsinline autoplay loop>
+                    <source src="img/Bg2.mp4" type="video/mp4">
+                </video>
+    </div>
+    <div class="gridContainer clearfix">
+        <div class="header">
+            <div class="logo"><img src="img/logo1.png" />
+                <p class="UName"></p>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <a href="javascript:void(0);" class="navIcon">
+                            <i class="fa fa-bars"></i> Menu
+                        </a>
+                        <div class="nav">
+                            <li id="navLogin"></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="index.html">Store</a></li>
+                            <li><a href="cart.html" id="navCart">Cart&#65077;0&#65078;</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <section class="layout-top">
+        <div class="boxOrder"> </div>
+    </section>
+    <section class="contant">
+        <div class="Container">
+            <div class="topBox"></div>
+            <div class="userContainer">
+                <h1>Check Out</h1>
+                <form id="checkOutFrom" method="POST">
+                    <ul class="flex-outer" id="DeliveryForm">
+                        <h2>Delivery Infomation</h2>
+                        <div>
+                            <li>
+                                <label for="name">Receiver Name:</label>
+                                <input type="text" class="inputs" id="name" name="rName" placeholder="Receiver Name*" required="required">
+                            </li>
+                            <li>
+                                <label for="phone">Phone Number:</label>
+                                <input type="text" class="inputs" id="phone" name="rPhone" placeholder="Phone Number*" required="required">
+                            </li>
+                            <li>
+                                <label for="address">Address:</label>
+                                <textarea rows="3" class="inputs" id="address" name="rAddress" placeholder="Your Address*" required="required"></textarea>
+                            </li>
+                        </div>
+                    </ul>
+                    <ul class="flex-outer" id="PaymentForm">
+                        <h2>Payment Infomation</h2>
+                        <p>Only accept visa or master only</p><br/>
+                        <div>
+                            <li>
+                                <label for="name">Name on card:</label>
+                                <input type="text" class="inputs" id="name" placeholder="Ex. Alan Tan" required="required" title="Please fill in name on card">
+                            </li>
+                            <li>
+                                <label for="card">Card Number:</label>
+                                <input type="text" class="inputs" id="card" placeholder="1234 1234 1234 1234" pattern="[0-9]{4}[\s]{1}[0-9]{4}[\s]{1}[0-9]{4}[\s]{1}[0-9]{4}" title="Invalid Card Number" required="required" autocomplete="off">
+                            </li>
+                            <li>
+                                <label for="card" id="cardOutput"></label>
+                            </li>
+                            <li>
+                                <label for="expiry">Expiry Date</label>
+                                <input type="text" class="inputs" id="expiry" placeholder="02/22" maxlength="5" pattern="[0-9]{2}[/]{1}[0-9]{2}" title="Invalid Expiry Date" required="required" autocomplete="off">
+                            </li>
+                            <li>
+                                <label for="code">Security pin (cvv)</label>
+                                <input type="text" class="inputs" id="code" placeholder="789" maxlength="3" pattern="[0-9]{3}" title="Invalid Security pin" required="required" autocomplete="off">
+                            </li>
+                        </div>
+                    </ul>
+                    <ul>
+                        <button type="button" id="btnBack">Back</button>
+                        <button type="submit" id="btnOrder">Order now</button>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div id="social">
+            <ul>
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-twitter-square"></i></li>
+                <li><i class="fab fa-telegram"></i></li>
+            </ul>
+            <p>© 2018 Cocoland Inc. All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="JS/cleave.min.js"></script>
+    <script src="JS/cleave-phone.i18n.js"></script>
+    <script>
+        var cleavePhone = new Cleave('#phone', {
+            phone: true,
+            phoneRegionCode: 'SG'
+        });
+        cleavePhone.setPhoneRegionCode('SG');
+        cleavePhone.setRawValue('');
+        var cleaveCard = new Cleave('#card', {
+            creditCard: true,
+            onCreditCardTypeChanged: function(type) {
+                if (type == "visa") {
+                    $("#cardOutput").html("Card type: Visa").css({
+                        'color': 'black',
+                        'font-weight': 'normal'
+                    });
+                } else if (type == "mastercard") {
+                    $("#cardOutput").html("Card type: Master").css({
+                        'color': 'black',
+                        'font-weight': 'normal'
+                    });
+                } else {
+                    $("#cardOutput").html("Card type: Not vaild").css({
+                        'color': 'red',
+                        'font-weight': 'bold'
+                    });
+                }
+            }
+        });
+        var cleaveNumeral = new Cleave('#code', {
+            numeral: true
+        });
+        var cleaveExpiry = new Cleave('#expiry', {
+            numeral: true,
+            numeralThousandsGroupStyle: 'wan'
+        });
+        var cleaveExpiry = new Cleave('#expiry', {
+            blocks: [2, 2],
+            delimiter: '/',
+            uppercase: true
+        });
+    </script>
+</body>
+
+</html>
