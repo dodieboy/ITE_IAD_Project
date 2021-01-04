@@ -1,9 +1,7 @@
-<!--
-SPDX-Short-Identifier: MIT
-(c) 2019 Alan Tan
-This code is licensed under MIT license (See LICENSE.txt for details)
--->
 <?php
+//SPDX-Short-Identifier: MIT
+//(c) 2021 Alan Tan
+//This code is licensed under MIT license (See LICENSE.txt for details)
 include 'main.php';
 $tb = 'user';
 

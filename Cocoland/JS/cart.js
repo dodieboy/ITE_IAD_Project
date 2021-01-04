@@ -1,8 +1,4 @@
-/*
-SPDX-Short-Identifier: MIT
-(c) 2019 Alan Tan
-This code is licensed under MIT license (See LICENSE.txt for details)
-*/
+
 $(document).ready(function() {
     showTable();
     $('#btnRefresh').click(function(event) {
@@ -27,7 +23,7 @@ function showTable() {
         dataType: 'json',
         success: function(data) {
             cart_check();
-            if (data == "empty") {
+            if (data == '"empty"' || data == 'empty') {
                 $('#table').html("<p>Cart is empty</p>");
             } else {
                 var tables = "<table align=center id='cartTable'><tr><th id='tName'>Product Name</th><th id='tQuantity'>Quantity</th><th id='tPrice'>Price</th><th id='tTotal'>Total</th><th id='tDelete'>Delete</th></tr>";

@@ -52,6 +52,9 @@ function login_check() {
                     $('.UName').html('Welcome ' + '<b><a href="admin.html" class="user" title="Go admin portal">' + data[0] + '</a></b>');
                 }
             }
+        },
+        error: function(data) {
+            alert("error: Login failed");
         }
     })
 }
