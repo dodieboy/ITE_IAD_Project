@@ -536,3 +536,9 @@ V5.4
 	1.MIT license
 	Change:
 	1.Reorganise all file
+
+V5.5
+	Change:
+	1. Fix background not working for firefox
+	2. Fix copyright msg cause php file to fail
+	3. Update copyright msg to 2021
