@@ -1,5 +1,5 @@
 # CocoLand
-An e-commerce prototype website created for my ITE IAD Project
+An e-commerce prototype website design created for my ITE IAD Project
 Done using html 5, jquery, apache and mySQL
 
 ## STATUS: Completed
