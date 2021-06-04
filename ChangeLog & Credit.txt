@@ -547,3 +547,7 @@ V5.5
 	2. Fix copyright msg cause php file to fail
 	3. Update copyright msg to 2021
 	4. Fix when cart is empty, it show an error msg
+V5.5.1
+	Change:
+	1. preload bg img when bg video still loading
+	2. compress of img
